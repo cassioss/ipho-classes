@@ -1,0 +1,150 @@
+% !TEX encoding = UTF-8 Unicode
+\documentclass[11pt, a4paper]{article}
+\pagestyle{headings}
+
+\usepackage[brazil]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{verbatim}
+\usepackage{graphicx}
+\usepackage{latexsym}
+\usepackage{mathrsfs}
+\usepackage{amssymb, amsmath, pxfonts}
+\usepackage[normalem]{ulem}				%permite sublinhar palavras
+\usepackage[top=3cm,left=3cm,right=3cm,bottom=3cm]{geometry} %margens
+\usepackage[usenames]{color} 			% permite letras coloridas
+\usepackage{makeidx} 					% para criar índice remissivo
+\usepackage{indentfirst}				% coloca o tab automaticamente
+
+\expandafter\def\expandafter\normalsize\expandafter{%
+    \normalsize
+    \setlength\abovedisplayskip{2pt}
+    \setlength\belowdisplayskip{12pt}
+    \setlength\abovedisplayshortskip{2pt}
+    \setlength\belowdisplayshortskip{12pt}
+}
+
+\newcommand{\ui}{\mathrm{i}}
+\newcommand{\ud}{\mathrm{d}}
+
+\title{Energia do Ponto Zero}
+\author{Cássio dos Santos Sousa}
+
+\begin{document}
+\maketitle
+
+\section{Introdução}
+
+Todos os estados energéticos de uma partícula podem ser deduzidos a partir da \textbf{equação de Planck}:
+
+\begin{equation}
+    \epsilon = \frac{h\omega}{e^{\frac{h\omega}{kT}} - 1}
+    \label{eq1}
+\end{equation}
+
+No entanto, o que se percebe é que, no chamado \textbf{ponto zero}, onde uma partícula não se encontra deslocada da origem nem se movimentando, ela possui sim energia. Isso concorda com a \textbf{Equação de Schr\"odinger}, que diz que toda partícula possui uma incerteza mínima em sua posição e velocidade:
+
+\begin{equation}
+    \Delta p \Delta x \geq \frac{\hbar}{2} = \frac{h}{4\pi}
+    \label{eq2}
+\end{equation}
+
+Vamos então descobrir qual é o valor dessa energia a partir da Equação de Schr\"odinger.
+
+\section{Prova utilizando o Princípio da Incerteza}
+
+A posição e o momento linear de uma partícula são dados por meio de um valor médio e de uma incerteza:
+
+\begin{eqnarray}
+    p = \bar{p} + \Delta p  \label{eq3} \\
+    x = \bar{x} + \Delta x  \label{eq4}
+\end{eqnarray}
+
+Se, pela definição do ponto zero, a partícula não se encontra deslocada da origem nem se movimentando, então, no caso médio:
+
+\begin{equation}
+    \bar{p} = \bar{x} = 0   \label{eq5}
+\end{equation}
+
+Logo, no ponto zero:
+
+\begin{eqnarray}
+    p = \Delta p  \label{eq6} \\
+    x = \Delta x  \label{eq7}
+\end{eqnarray}
+
+Do operador Hamiltoniano, temos que a energia de uma partícula de massa $m$ com uma frequência natural ${\omega}_0$ é dada por:
+
+\begin{equation}
+    H = V_0 + \frac{k x^2}{2} + \frac{p^2}{2m}
+    \label{eq8}
+\end{equation}
+
+Onde:
+
+\begin{equation}
+    k = m {{\omega}_0}^2
+    \label{eq9}
+\end{equation}
+
+Por conta das equações (\ref{eq6}) e (\ref{eq7}), teremos:
+
+\begin{equation}
+    H = V_0 + \frac{k {\Delta x}^2}{2} + \frac{{\Delta p}^2}{2m}
+    \label{eq10}
+\end{equation}
+
+No entanto, pelo Princípio da Incerteza descrito em (\ref{eq2}), temos que:
+
+\begin{equation}
+    \Delta p \geq \frac{\hbar}{2 \Delta x}
+    \label{eq11}
+\end{equation}
+
+Utilizando (\ref{eq11}) em (\ref{eq10}):
+
+\begin{equation}
+    H \geq V_0 + \frac{k {\Delta x}^2}{2} + \frac{{\hbar}^2}{8m{\Delta x}^2}
+    \label{eq12}
+\end{equation}
+
+É sempre possível derivar esta expressão e encontrar seu valor mínimo. No entanto, vamos reescrevê-la um pouco antes:
+
+\begin{equation}
+    H \geq V_0 + \frac{\hbar}{4}\sqrt{\frac{k}{m}} \left( \frac{2{\Delta x}^2 \sqrt{km}}{\hbar} + \frac{\hbar}{2{\Delta x}^2 \sqrt{km}} \right)
+    \label{eq13}
+\end{equation}
+
+Nesta equação, vemos que $H$ é maior ou igual à soma de um número com seu inverso. No entanto, sabemos que o quadrado de qualquer número real é maior ou igual a zero. Logo, se utilizarmos $w > 0$:
+
+\begin{equation}
+    \left(\sqrt{w} - \sqrt{\frac{1}{w}} \right)^2 \geq 0   \label{eq14}
+\end{equation}
+
+Desenvolvendo esta equação, podemos obter que:
+
+\begin{equation}
+    w + \frac{1}{w} \geq 2   \label{eq15}
+\end{equation}
+
+Ou seja, se $w > 0$, a soma de $w$ com seu inverso será sempre maior ou igual a 2. Logo, tomando:
+
+\begin{equation}
+    w = \frac{2{\Delta x}^2 \sqrt{km}}{\hbar}   \label{eq16}
+\end{equation}
+
+E utilizando a eq. (\ref{eq15}) na eq. (\ref{eq13}), temos que:
+
+\begin{equation}
+    H \geq V_0 + \frac{\hbar}{2}\sqrt{\frac{k}{m}}   \label{eq17}
+\end{equation}
+
+Utilizando agora a relação da eq. (\ref{eq9}), chegamos que:
+
+\begin{equation}
+    H \geq V_0 + \frac{\hbar {\omega}_0}{2}   \label{eq18}
+\end{equation}
+
+O termo $\frac{\hbar {\omega}_0}{2}$ é chamado de \textbf{energia do ponto zero}.
+
+\end{document}
