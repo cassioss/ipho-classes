@@ -1,7 +1,32 @@
 % !TEX encoding = UTF-8 Unicode
-\include{preamble}
+\documentclass[12pt, a4paper]{article}
+\pagestyle{headings}
+
+\usepackage[american]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage{amssymb, amsmath, pxfonts}
+
+\usepackage{verbatim}
+\usepackage{graphicx}
+\usepackage{latexsym}
+\usepackage{mathrsfs}
+
+\usepackage{indentfirst}
+
+\usepackage[normalem]{ulem} %permite sublinhar palavras
+\usepackage{mathrsfs} %permite o uso de letras trabalhadas
+\usepackage[top=3cm,left=3cm,right=2cm,bottom=3cm]{geometry} %margens
+
+\usepackage[usenames]{color} % permite letras coloridas
+\usepackage{makeidx} % para criar índice remissivo
+\makeindex % construção do índice
+
+\usepackage{indentfirst} % coloca o tab automaticamente em um novo parágrafo
 
 \title{Ellipses and Planetary Orbits}
+\author{Cássio dos Santos Sousa}
 
 \begin{document}
 
@@ -11,17 +36,17 @@
 
 \newpage
 
-\section{Introdução}
+\section{Introduction}
 
-Muitos dos conceitos relacionados a órbitas e Gravitação requerem um conhecimento básico sobre elipses. Serão mostradas aqui duas formas de se analisar uma elipse matematicamente, a primeira utilizando sua equação em coordenadas cartesianas, e a segunda em coordenadas polares. Após isso, serão feitas as primeiras análises envolvendo Gravitação propriamente dita, ligando os conceitos de elipses para descrever órbitas planetárias.
+Many of the concepts related to orbits and Gravitation require basic knowledge about ellipses. It will be shown here two ways to analyse an ellipse mathematically: first using its equation in Cartesian coordinates, and second using its equation in polar coordinates. After that, the main analyses involving Gravitation will be made, linking the concepts of ellipses to describe planetary orbits.
 
-\section{Definição}
+\section{Definition}
 
 The ellipse , by definition , is the locus of points the sum of whose distances from two fixed points is constant. The trajectory described by this locus is closed, and resembles a circle. The degenerated ellipse (in which these two points coincide) is indeed the circumference. It is one of the most known and used conics.
 
-\section{Nomenclatura}
+\section{Nomenclature}
 
-Um simples desenho da elipse A simple drawing of the ellipse to be analyzed is one in which, in Cartesian coordinates, the line determined by fixed points (named \textbf{major axis}) is aligned with the \textit{x}-  or \textit{y}-axis (Fig. 1).
+A simple drawing of the ellipse to be analyzed is one in which, in Cartesian coordinates, the line determined by fixed points (named \textbf{major axis}) is aligned with the \textit{x}-  or \textit{y}-axis (Fig. 1).
 
 \begin{figure}[!htb]
     \centering
@@ -30,21 +55,21 @@ Um simples desenho da elipse A simple drawing of the ellipse to be analyzed is o
 	\label{fig1}
 \end{figure}
 
-A nomenclatura relevante Ã s seÃ§Ãµes seguintes Ã© dada a seguir. Outros termos relevantes terÃ£o seÃ§Ãµes prÃ³prias para serem mostrados e definidos apropriadamente.
+A nomenclatura relevante às seções seguintes é dada a seguir. Outros termos relevantes terão seções próprias para serem mostrados e definidos apropriadamente.
 
 \begin{itemize}
     \item{\textbf{Focos:} pontos fixos (destacados em preto) que desenham a elipse;}
-    \item{\textbf{DistÃ¢ncia focal (2c):} distÃ¢ncia entre os focos;}
-    \item{\textbf{Semi-eixo maior (a):} distÃ¢ncia entre o centro e o ponto mais distante da elipse;}
-    \item{\textbf{Semi-eixo menor (b):} distÃ¢ncia entre o centro e o ponto mais prÃ³ximo da elipse.}
-    \item{\textbf{Eixo principal/secundÃ¡rio:} contÃ©m o semi-eixo maior/menor.}
+    \item{\textbf{Distância focal (2c):} distância entre os focos;}
+    \item{\textbf{Semi-eixo maior (a):} distância entre o centro e o ponto mais distante da elipse;}
+    \item{\textbf{Semi-eixo menor (b):} distância entre o centro e o ponto mais próximo da elipse.}
+    \item{\textbf{Eixo principal/secundário:} contém o semi-eixo maior/menor.}
 \end{itemize}
 
-Frente Ã  essa nomenclatura, Ã© fÃ¡cil de perceber que a soma das distÃ¢ncias da definiÃ§Ã£o Ã© igual Ã  \textbf{2a}. Basta considerar os pontos da elipse no eixo principal: a soma das distÃ¢ncias Ã© (a-c)+(a+c) = 2a. E usaremos isso para deduzir a equaÃ§Ã£o da elipse.
+Frente à essa nomenclatura, é fácil de perceber que a soma das distâncias da definição é igual à \textbf{2a}. Basta considerar os pontos da elipse no eixo principal: a soma das distâncias é (a-c)+(a+c) = 2a. E usaremos isso para deduzir a equação da elipse.
 
-\section{EquaÃ§Ã£o da elipse na forma cartesiana}
+\section{Equação da elipse na forma cartesiana}
 
-A forma mais simples de se enxergar a elipse em coordenadas cartesianas Ã© dada na fig. 1. Tomando estes eixos como base, deduziremos a equaÃ§Ã£o da elipse para um ponto (x,y) qualquer dela, colocando o centro da elipse na origem do sistema de coordenadas (fig. 2). SerÃ¡ utilizada geometria bÃ¡sica para isso.
+A forma mais simples de se enxergar a elipse em coordenadas cartesianas é dada na fig. 1. Tomando estes eixos como base, deduziremos a equação da elipse para um ponto (x,y) qualquer dela, colocando o centro da elipse na origem do sistema de coordenadas (fig. 2). Será utilizada geometria básica para isso.
 
 \begin{figure}[!htb]
     \centering
@@ -53,12 +78,12 @@ A forma mais simples de se enxergar a elipse em coordenadas cartesianas Ã© dad
     \label{fig2}
 \end{figure}
 
-Dada a definiÃ§Ã£o e o Teorema de PitÃ¡goras, podemos chegar que:
+Dada a definição e o Teorema de Pitágoras, podemos chegar que:
 \begin{eqnarray}
     \sqrt{y^2 + (x-c)^2} + \sqrt{y^2 + (x+c)^2} = 2a \label{eq1}
 \end{eqnarray}
 
-Vamos entÃ£o elevar ambas as expressÃµes ao quadrado, isolando termos semelhantes e raÃ­zes, atÃ© chegar na expressÃ£o final:
+Vamos então elevar ambas as expressões ao quadrado, isolando termos semelhantes e raízes, até chegar na expressão final:
 
 \[
 	\lim_{x \rightarrow a}{f(x)} = L
@@ -80,41 +105,41 @@ Vamos entÃ£o elevar ambas as expressÃµes ao quadrado, isolando termos semelh
 	a^2(a^2-c^2) = x^2(a^2-c^2) + y^2a^2    
 \]
 
-As equaÃ§Ãµes anteriores apenas desenvolveram a expressÃ£o (\ref{eq1}), tendo em mente que as raÃ­zes precisavam sumir da expressÃ£o inicial e que termos semelhantes precisavam ser agrupados ou removidos, ou seja, o intuito era simplificar. Dividindo a Ãºltima equaÃ§Ã£o apresentada por $a^2(a^2 - c^2)$, chegaremos que:
+As equações anteriores apenas desenvolveram a expressão (\ref{eq1}), tendo em mente que as raízes precisavam sumir da expressão inicial e que termos semelhantes precisavam ser agrupados ou removidos, ou seja, o intuito era simplificar. Dividindo a última equação apresentada por $a^2(a^2 - c^2)$, chegaremos que:
 \begin{eqnarray}
     \frac{x^2}{a^2} + \frac{y^2}{a^2 - c^2} = 1 \label{eq2}
 \end{eqnarray}
 
-Esta equaÃ§Ã£o ainda nÃ£o tem o formato conhecido por muitas pessoas. Usemos entÃ£o as definiÃ§Ãµes para uma equaÃ§Ã£o mais simples, usando o semi-eixo menor \textit{b} (fig. 3). {\\}
+Esta equação ainda não tem o formato conhecido por muitas pessoas. Usemos então as definições para uma equação mais simples, usando o semi-eixo menor \textit{b} (fig. 3). {\\}
 
 \begin{figure}[!htb]
     \centering
      \includegraphics[scale=0.5]{elipse3.png}
-    {\emph{\caption{Ponto notÃ¡vel de elipse, mostrando o semi-eixo menor.}}}
+    {\emph{\caption{Ponto notável de elipse, mostrando o semi-eixo menor.}}}
     \label{fig3}
 \end{figure}
 
-Pela definiÃ§Ã£o, a soma das distÃ¢ncias do foco aos pontos da elipse Ã© constante. Tomemos entÃ£o o ponto mais prÃ³ximo do centro, que Ã© denotado pelo semi-eixo menor. Como as distÃ¢ncias aos focos sÃ£o iguais, ambas valem \textit{a}. Dado o triÃ¢ngulo retÃ¢ngulo da figura acima, pelo Teorema de PitÃ¡goras:
+Pela definição, a soma das distâncias do foco aos pontos da elipse é constante. Tomemos então o ponto mais próximo do centro, que é denotado pelo semi-eixo menor. Como as distâncias aos focos são iguais, ambas valem \textit{a}. Dado o triângulo retângulo da figura acima, pelo Teorema de Pitágoras:
 \begin{eqnarray}
     a^2 = b^2 + c^2 \label{eq3}
 \end{eqnarray}
 
-Utilizando a equaÃ§Ã£o (\ref{eq3}) na equaÃ§Ã£o (\ref{eq2}), chegamos entÃ£o que:
+Utilizando a equação (\ref{eq3}) na equação (\ref{eq2}), chegamos então que:
 \begin{eqnarray}
    \bf{\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1} \label{eq4}
 \end{eqnarray}
 
-Esta Ã© a \textbf{equaÃ§Ã£o da elipse em coordenadas cartesianas} que tÃ£o bem conhecemos. HÃ¡ um outro formato conhecido da equaÃ§Ã£o da elipse, no qual o centro da elipse estÃ¡ presente num ponto $(x_0, y_0)$, fora da origem. A prova Ã© deixada ao leitor, mas o formato e a prova da equaÃ§Ã£o seguinte sÃ£o bem semelhantes ao da equaÃ§Ã£o (\ref{eq4}):
+Esta é a \textbf{equação da elipse em coordenadas cartesianas} que tão bem conhecemos. Há um outro formato conhecido da equação da elipse, no qual o centro da elipse está presente num ponto $(x_0, y_0)$, fora da origem. A prova é deixada ao leitor, mas o formato e a prova da equação seguinte são bem semelhantes ao da equação (\ref{eq4}):
 
 \begin{eqnarray}
     \frac{(x-x_0)^2}{a^2} + \frac{(y-y_0)^2}{b^2} = 1 \label{eq5}
 \end{eqnarray}
 
-HÃ¡ tambÃ©m um Ãºtlimo formato da equaÃ§Ã£o da elipse cartesiana, o qual considera o formato rotacionado dos eixos. No entanto, para a GravitaÃ§Ã£o, ele nos serÃ¡ pouco Ãºtil, uma vez que as coordenadas mais utilizadas sÃ£o as polares. Mas antes de mostrarmos a elipse em coordenadas polares, utilizaremos uma medida muito comum em equaÃ§Ãµes de cÃŽnicas, o \textit{semi-latus rectum} (ou \textit{semilatus rectum}), denotado pela letra \textit{l}.
+Há também um útlimo formato da equação da elipse cartesiana, o qual considera o formato rotacionado dos eixos. No entanto, para a Gravitação, ele nos será pouco útil, uma vez que as coordenadas mais utilizadas são as polares. Mas antes de mostrarmos a elipse em coordenadas polares, utilizaremos uma medida muito comum em equações de cônicas, o \textit{semi-latus rectum} (ou \textit{semilatus rectum}), denotado pela letra \textit{l}.
 
 \section{Semi-latus rectum}
 
-O \textit{semi-latus rectum}, por definiÃ§Ã£o, Ã© a meia corda que passa pelo foco de uma cÃŽnica, Ã© perperndicular ao eixo principal e tem um de seus extremos na prÃ³pria cÃŽnica. Utilizemos entÃ£o esta definiÃ§Ã£o para a elipse (fig. 4).
+O \textit{semi-latus rectum}, por definição, é a meia corda que passa pelo foco de uma cônica, é perperndicular ao eixo principal e tem um de seus extremos na própria cônica. Utilizemos então esta definição para a elipse (fig. 4).
 
 \begin{figure}[!htb]
     \centering
@@ -123,13 +148,13 @@ O \textit{semi-latus rectum}, por definiÃ§Ã£o, Ã© a meia corda que passa p
     \label{fig4}
 \end{figure}
 
-TraÃ§ando a perpendicular recomendada, obtÃ©m-se uma corda de comprimento \textit{l}. Como esta corda Ã© perpendicular, podemos utilizar este fato juntamente com a definiÃ§Ã£o de elipse para descobrir o seu valor, por meio do Teorema de PitÃ¡goras:
+Traçando a perpendicular recomendada, obtém-se uma corda de comprimento \textit{l}. Como esta corda é perpendicular, podemos utilizar este fato juntamente com a definição de elipse para descobrir o seu valor, por meio do Teorema de Pitágoras:
 
 \begin{eqnarray}
 	(2a-l)^2 = l^2 + 4c^2 \label{eq6}
 \end{eqnarray}
 
-Da equaÃ§Ã£o anterior: {\\}
+Da equação anterior: {\\}
 \[
 	4a^2 - 4al = 4c^2
 \]
@@ -138,36 +163,36 @@ Da equaÃ§Ã£o anterior: {\\}
 	 l = \frac{a^2 - c^2}{a}
 \]
 
-Da equaÃ§Ã£o (\ref{eq3}):
+Da equação (\ref{eq3}):
 \begin{eqnarray}
 	\bf{l = \frac{b^2}{a}} \label{eq7}
 \end{eqnarray}
 
 \section{Excentricidade}
 
-Algo tambÃ©m muito conhecido da GravitaÃ§Ã£o Ã© a chamada \textbf{excentricidade}, muito comum no que se refere a Ã³rbitas. Pela definiÃ§Ã£o, toda cÃŽnica pode ser definida como o lugar geomÃ©trico dos pontos cujas distÃ¢ncias a um ponto e a uma reta possuem a mesma razÃ£o. No caso da elipse, hÃ¡ duas retas (uma para cada foco) externas e paralelas ao eixo secundÃ¡rio que possuem tal propriedade. PorÃ©m, tal definiÃ§Ã£o nÃ£o nos Ã© Ãºtil. $\\$
+Algo também muito conhecido da Gravitação é a chamada \textbf{excentricidade}, muito comum no que se refere a órbitas. Pela definição, toda cônica pode ser definida como o lugar geométrico dos pontos cujas distâncias a um ponto e a uma reta possuem a mesma razão. No caso da elipse, há duas retas (uma para cada foco) externas e paralelas ao eixo secundário que possuem tal propriedade. Porém, tal definição não nos é útil. $\\$
 
-Ao invÃ©s disso, utilizaremos uma outra definiÃ§Ã£o: a excentricidade $\epsilon$ pode ser dada pela razÃ£o entre a excentricidade linear (definida como a distÃ¢ncia entre o centro da cÃŽnica e qualquer um dos focos, neste caso \textit{c}) e o semi-eixo maior \textit{a}:
+Ao invés disso, utilizaremos uma outra definição: a excentricidade $\epsilon$ pode ser dada pela razão entre a excentricidade linear (definida como a distância entre o centro da cônica e qualquer um dos focos, neste caso \textit{c}) e o semi-eixo maior \textit{a}:
 \begin{eqnarray}
 	\epsilon = \frac{c}{a} \label{eq8}
 \end{eqnarray}
 
-HÃ¡ formas diferentes de se enxergar \textit{c}, de acordo com a cÃŽnica avaliada. No caso da circunferÃªncia, os focos coincidem, entÃ£o \textit{c} vale zero. No caso da parÃ¡bola, ele coincide (em valor) com o semi-eixo maior. No caso da hipÃ©rbole, ele Ã© maior que o semi-eixo maior, e o triÃ¢ngulo retÃ¢ngulo que contÃªm \textit{a}, \textit{b} e \textit{c} possui \textit{c} como hipotenusa. $\\$
+Há formas diferentes de se enxergar \textit{c}, de acordo com a cônica avaliada. No caso da circunferência, os focos coincidem, então \textit{c} vale zero. No caso da parábola, ele coincide (em valor) com o semi-eixo maior. No caso da hipérbole, ele é maior que o semi-eixo maior, e o triângulo retângulo que contêm \textit{a}, \textit{b} e \textit{c} possui \textit{c} como hipotenusa. $\\$
 
-Importar-nos-Ã¡, por enquanto, que a elipse possui $c<a$, e portanto $0<\epsilon <1$. Com estes valores definidos ($\epsilon$ e \textit{l}), podemos finalmente seguir Ã  forma polar.
+Importar-nos-á, por enquanto, que a elipse possui $c<a$, e portanto $0<\epsilon <1$. Com estes valores definidos ($\epsilon$ e \textit{l}), podemos finalmente seguir à forma polar.
 
-\section{EquaÃ§Ã£o da elipse na forma polar}
+\section{Equação da elipse na forma polar}
 
-Na forma polar, toma-se um dos focos como origem da distÃ¢ncia radial \textit{r}, e a contagem do Ã¢ngulo $\theta$ costuma comeÃ§ar a partir do eixo principal, no sentido anti-horÃ¡rio. Tomemos entÃ£o um ponto qualquer da elipse definido pelo par $(r,\theta)$, e utilizaremos a definiÃ§Ã£o de elipse para chegar na equaÃ§Ã£o polar (fig. 5).
+Na forma polar, toma-se um dos focos como origem da distância radial \textit{r}, e a contagem do ângulo $\theta$ costuma começar a partir do eixo principal, no sentido anti-horário. Tomemos então um ponto qualquer da elipse definido pelo par $(r,\theta)$, e utilizaremos a definição de elipse para chegar na equação polar (fig. 5).
 
 \begin{figure}[!htb]
     \centering
      \includegraphics[scale=0.5]{elipse5.png}
-    {\emph{\caption{TriÃ¢ngulo utilizado para se chegar na forma polar.}}}
+    {\emph{\caption{Triângulo utilizado para se chegar na forma polar.}}}
     \label{fig5}
 \end{figure}
 
-Frente ao triÃ¢ngulo denotado acima, pela lei dos cossenos:
+Frente ao triângulo denotado acima, pela lei dos cossenos:
 
 \begin{eqnarray}
 	(2a-r)^2 = r^2 + (2c)^2 - 2(r)(2c)cos\theta \label{eq9}
@@ -184,35 +209,35 @@ Dividindo tudo por \textit{a}:
 	\frac{a^2 - c^2}{a}= r\left(1- \left(\frac{c}{a}\right)cos\theta\right) \label{eq18}
 \]{\\}
 
-Com o auxÃ­lio das equaÃ§Ãµes (\ref{eq7}) e (\ref{eq8}), podemos chegar Ã  seguinte equaÃ§Ã£o:
+Com o auxílio das equações (\ref{eq7}) e (\ref{eq8}), podemos chegar à seguinte equação:
 
 \begin{eqnarray}
 	\bf{\frac{l}{r}=(1-\epsilon cos\theta)} \label{eq10}
 \end{eqnarray}
 
-A equaÃ§Ã£o anterior Ã© denominada \textbf{equaÃ§Ã£o da elipse em coordenadas polares}. HÃ¡ tambÃ©m um formato muito Ãºtil para o caso de elipses rotacionadas, pois ele nÃ£o depende do alinhamento do eixo principal com outros eixos de referÃªncia:
+A equação anterior é denominada \textbf{equação da elipse em coordenadas polares}. Há também um formato muito útil para o caso de elipses rotacionadas, pois ele não depende do alinhamento do eixo principal com outros eixos de referência:
 
 \begin{eqnarray}
 	\frac{l}{r}=(1-\epsilon cos(\theta - \theta_0)) \label{eq11}
 \end{eqnarray}
 
-As equaÃ§Ãµes (\ref{eq10}) e (\ref{eq11}) podem ser utilizadas para representar qualquer cÃŽnica, definidos o \textit{semi-latus rectum} e a excentricidade. Estas mesmas equaÃ§Ãµes sÃ£o as bases da anÃ¡lise elÃ­ptica das equaÃ§Ãµes de Ã³rbita na GravitaÃ§Ã£o.
+As equações (\ref{eq10}) e (\ref{eq11}) podem ser utilizadas para representar qualquer cônica, definidos o \textit{semi-latus rectum} e a excentricidade. Estas mesmas equações são as bases da análise elíptica das equações de órbita na Gravitação.
 
-\section{ForÃ§as centrais}
+\section{Forças centrais}
 
-Entrando agora no Ã¢mbito da GravitaÃ§Ã£o propriamente dita, comeÃ§aremos analisando as chamadas forÃ§as centrais. A definiÃ§Ã£o formal de forÃ§a central Ã© a de que sua dependÃªncia Ã© unicamente radial, i.e.:
+Entrando agora no âmbito da Gravitação propriamente dita, começaremos analisando as chamadas forças centrais. A definição formal de força central é a de que sua dependência é unicamente radial, i.e.:
 
 \begin{eqnarray}
 	\mathbf{F} =\mathbf{F}(\mathbf{r}) = F_r \mathbf{\hat{r}} \label{eq12}
 \end{eqnarray}
 
-Vendo a fÃ³rmula anterior de outra forma, ela nos traz que as componentes tangenciais (no caso de coordenadas esfÃ©ricas, as componentes nas direÃ§Ãµes $\theta$ e $\phi$) sÃ£o nulas em todo o espaÃ§o. E isso nos Ã© muito Ãºtil, pois isso traz Ã³timas propriedades.
+Vendo a fórmula anterior de outra forma, ela nos traz que as componentes tangenciais (no caso de coordenadas esféricas, as componentes nas direções $\theta$ e $\phi$) são nulas em todo o espaço. E isso nos é muito útil, pois isso traz ótimas propriedades.
 
-\subsection{Uma forÃ§a central Ã© conservativa}
+\subsection{Uma força central é conservativa}
 
-Um detalhe muito bom da forÃ§a central: o rotacional de \textbf{F} Ã© \textbf{nulo}. {\\}
+Um detalhe muito bom da força central: o rotacional de \textbf{F} é \textbf{nulo}. {\\}
 
-Para provar isso, basta utilizar a definiÃ§Ã£o de rotacional para coordenadas esfÃ©ricas:
+Para provar isso, basta utilizar a definição de rotacional para coordenadas esféricas:
 
 \begin{eqnarray}
 	\nabla \times \textbf{F} (r,\theta,\phi) = \frac{1}{r^2sen\theta} \begin{vmatrix} & \hat{r} &rsen\phi\hat{\theta} &  r\hat{\phi} & \\ \\ & \frac{\partial}{\partial r} & \frac{\partial}{\partial \theta} & \frac{\partial}{\partial \phi} & \\ \\ & F_r & rsen\phi F_{\theta} & rF_{\phi} & \end{vmatrix} \label{eq13}	
@@ -225,124 +250,124 @@ Desenvolvendo o determinante, com $F_{\theta}$ = $F_{\phi}$ = 0:
 \]
 {\\}
 
-No entanto, $F_r$ depende apenas de \textbf{r}, entÃ£o:
+No entanto, $F_r$ depende apenas de \textbf{r}, então:
 
 \begin{eqnarray}
 	\nabla \times \mathbf{F} = \mathbf{0} \label{eq14}
 \end{eqnarray}
 
-Isso nos permite tirar a informaÃ§Ã£o do enunciado. Para isso, Ã© necessÃ¡rio avaliar uma outra equaÃ§Ã£o, a fÃ³rmula de Stokes:
+Isso nos permite tirar a informação do enunciado. Para isso, é necessário avaliar uma outra equação, a fórmula de Stokes:
 
 \begin{eqnarray}
 	\oint_{\partial S} \mathbf{F}.\mathbf{dl} = \int_S (\mathbf{\nabla \times F}).\mathbf{dS}, \label{eq15}
 \end{eqnarray}
-sendo $S$ uma superfÃ­cie \textit{qualquer} delimitada por um caminho fechado $\partial S$, e \textbf{dl} Ã© um segmento de percurso feito ao longo de $\partial S$. No entanto, da equaÃ§Ã£o (\ref{eq14}), o lado direito da equaÃ§Ã£o de Stokes Ã© sempre nulo. Logo, temos que, para uma forÃ§a central:
+sendo $S$ uma superfície \textit{qualquer} delimitada por um caminho fechado $\partial S$, e \textbf{dl} é um segmento de percurso feito ao longo de $\partial S$. No entanto, da equação (\ref{eq14}), o lado direito da equação de Stokes é sempre nulo. Logo, temos que, para uma força central:
 
 \begin{eqnarray}
 	\oint_{\partial S} \mathbf{F}.\mathbf{dl} = 0 \label{eq16}
 \end{eqnarray}
 
-A integral de uma forÃ§a central ao longo de um percurso fechado \textit{qualquer} Ã© nula. E isso nos serÃ¡ Ãºtil para descrever o que acontece com a energia potencial \textit{U} correspondente Ã  forÃ§a \textbf{F}, cuja relaÃ§Ã£o infinitesimal, por definiÃ§Ã£o, Ã© trazida por:
+A integral de uma força central ao longo de um percurso fechado \textit{qualquer} é nula. E isso nos será útil para descrever o que acontece com a energia potencial \textit{U} correspondente à força \textbf{F}, cuja relação infinitesimal, por definição, é trazida por:
 
 \begin{eqnarray}
 	dU= - \mathbf{F}.\mathbf{dl}  \label{eq17}
 \end{eqnarray}
 
-Se a forÃ§a \textbf{F} Ã© de fato conservativa, entÃ£o a variaÃ§Ã£o da energia potencial ao longo de um percurso fechado \textit{qualquer} tem de ser nulo (ou entÃ£o a energia estaria sendo perdida em alguma outra forma). Se unirmos este conceito e as eqs. (\ref{eq16}) e (\ref{eq17}), chega-se que:
+Se a força \textbf{F} é de fato conservativa, então a variação da energia potencial ao longo de um percurso fechado \textit{qualquer} tem de ser nulo (ou então a energia estaria sendo perdida em alguma outra forma). Se unirmos este conceito e as eqs. (\ref{eq16}) e (\ref{eq17}), chega-se que:
 
 \begin{eqnarray}
 	\oint_{\partial S} dU = 0, \label{eq18}
 \end{eqnarray}
-{\\}com $\partial S$ \textit{qualquer}. A expressÃ£o acima nos traz que \textbf{F} Ã© conservativa.
+{\\}com $\partial S$ \textit{qualquer}. A expressão acima nos traz que \textbf{F} é conservativa.
 
-\subsection{O momento angular Ã© conservado}
+\subsection{O momento angular é conservado}
 
-Isso nÃ£o tem muito a ver com o tÃ³pico anterior, pois a explicaÃ§Ã£o pode ser dada em termos da prÃ³pria trajetÃ³ria do corpo sob aÃ§Ã£o da forÃ§a \textbf{F}. {\\}
+Isso não tem muito a ver com o tópico anterior, pois a explicação pode ser dada em termos da própria trajetória do corpo sob ação da força \textbf{F}. {\\}
 
-Considere a expressÃ£o do torque $\tau$ da forÃ§a \textbf{F} num corpo que esteja a uma distÃ¢ncia \textbf{r} em relaÃ§Ã£o Ã  origem do sistema radial definido para a forÃ§a central:
+Considere a expressão do torque $\tau$ da força \textbf{F} num corpo que esteja a uma distância \textbf{r} em relação à origem do sistema radial definido para a força central:
 
 \begin{eqnarray}
 	\tau = \mathbf{r} \times \mathbf{F} \label{eq19}
 \end{eqnarray}
 
-Como \textbf{F} Ã© central, entÃ£o ele estÃ¡ na direÃ§Ã£o de \textbf{r}, o que nos traz:
+Como \textbf{F} é central, então ele está na direção de \textbf{r}, o que nos traz:
 
 \begin{eqnarray}
 	\tau = \mathbf{r} \times (F_r\mathbf{\hat{r}}) = rF_r(\mathbf{\hat{r}} \times \mathbf{\hat{r}}) = \mathbf{0} \label{eq20}
 \end{eqnarray}
 
-O torque total da forÃ§a Ã© nulo, quaisquer que sejam a posiÃ§Ã£o e a velocidade do corpo analisado (isso nÃ£o Ã© completamente vÃ¡lido para efeitos relativÃ­sticos, mas servirÃ¡ bem para nosso propÃ³sito). Logo, o momento angular total Ã© conservado.
+O torque total da força é nulo, quaisquer que sejam a posição e a velocidade do corpo analisado (isso não é completamente válido para efeitos relativísticos, mas servirá bem para nosso propósito). Logo, o momento angular total é conservado.
 
-\subsection{O movimento de um corpo devido a uma forÃ§a central Ã© plano}
+\subsection{O movimento de um corpo devido a uma força central é plano}
 
-Temos entÃ£o que o momento angular \textbf{L} Ã© constante. Se tomarmos a expressÃ£o original do momento angular:
+Temos então que o momento angular \textbf{L} é constante. Se tomarmos a expressão original do momento angular:
 
 \begin{eqnarray}
 	\mathbf{L} = m\mathbf{r} \times \mathbf{v} \label{extra01}
 \end{eqnarray}
 
-Se \textbf{r} e \textbf{v} estiverem na mesma direÃ§Ã£o, o momento angular Ã© nulo e o movimento estÃ¡ contido numa reta (pois a forÃ§a Ã© radial), a qual estÃ¡ contida nÃ£o em um, mas em infinitos (mesmos) planos.{\\}
+Se \textbf{r} e \textbf{v} estiverem na mesma direção, o momento angular é nulo e o movimento está contido numa reta (pois a força é radial), a qual está contida não em um, mas em infinitos (mesmos) planos.{\\}
 
-Se \textbf{r} e \textbf{v} nÃ£o estiverem na mesma direÃ§Ã£o, eles nunca estarÃ£o na mesma direÃ§Ã£o que o momento angular. Primeiro, que o produto escalar entre \textbf{r} (ou \textbf{v}) e \textbf{L} serÃ¡ sempre nulo, uma vez que:
+Se \textbf{r} e \textbf{v} não estiverem na mesma direção, eles nunca estarão na mesma direção que o momento angular. Primeiro, que o produto escalar entre \textbf{r} (ou \textbf{v}) e \textbf{L} será sempre nulo, uma vez que:
 \begin{eqnarray}
 	\mathbf{r.L} = m\mathbf{r}.(\mathbf{r} \times \mathbf{v}) \label{extra02}
 \end{eqnarray}
 
-A equaÃ§Ã£o anterior determina um produto misto, que resulta em um escalar. Para vetores $\mathbf{a} = (a_1, a_2, a_3)$, $\mathbf{b} = (b_1, b_2, b_3)$ e $\mathbf{c} = (c_1, c_2, c_3)$, ele Ã© dado por:
+A equação anterior determina um produto misto, que resulta em um escalar. Para vetores $\mathbf{a} = (a_1, a_2, a_3)$, $\mathbf{b} = (b_1, b_2, b_3)$ e $\mathbf{c} = (c_1, c_2, c_3)$, ele é dado por:
 
 \begin{eqnarray}
 	\mathbf{a . (b \times c)} = \begin{vmatrix} & a_1 & a_2 & a_3 &\\ \\&  b_1 & b_2 & b_3 &\\ \\ & c_1 & c_2 & c_3 &\end{vmatrix} \label{extra03}
 \end{eqnarray} 
 
-Como, no produto escalar de \textbf{r} (ou \textbf{v}) por \textbf{L}, haverÃ¡ duas linhas iguais no determinante acima, ele serÃ¡ nulo. Se o produto escalar entre dois vetores Ã© nulo, eles sÃ£o perpendiculares entre si.{\\}
+Como, no produto escalar de \textbf{r} (ou \textbf{v}) por \textbf{L}, haverá duas linhas iguais no determinante acima, ele será nulo. Se o produto escalar entre dois vetores é nulo, eles são perpendiculares entre si.{\\}
 
-Como \textbf{L} Ã© conservado, haverÃ¡  um plano que conterÃ¡ a origem do sistema de coordenadas e serÃ¡ perpendicular ao momento angular (contendo, portanto, todos os vetores perpendiculares a ele). Logo, \textbf{r} e \textbf{v} (suficientes para descrever o movimento) estarÃ£o sempre contidos neste Ãºnico plano (chamado tambÃ©m de \textbf{plano orbital}). 
+Como \textbf{L} é conservado, haverá  um plano que conterá a origem do sistema de coordenadas e será perpendicular ao momento angular (contendo, portanto, todos os vetores perpendiculares a ele). Logo, \textbf{r} e \textbf{v} (suficientes para descrever o movimento) estarão sempre contidos neste único plano (chamado também de \textbf{plano orbital}). 
 
-\section{ForÃ§a gravitacional}
+\section{Força gravitacional}
 
-A forÃ§a gravitacional foi primeiramente descrita por Newton, e depois reavaliada por Einstein ao descrever a Relatividade Geral (procure por MercÃºrio e sua peculiar "precessÃ£o de periÃ©lio" para ver a diferenÃ§a). Mexerei apenas com alguns dizeres de Newton, o que jÃ¡ trarÃ¡ bastante trabalho e aprendizado por agora. {\\}
+A força gravitacional foi primeiramente descrita por Newton, e depois reavaliada por Einstein ao descrever a Relatividade Geral (procure por Mercúrio e sua peculiar "precessão de periélio" para ver a diferença). Mexerei apenas com alguns dizeres de Newton, o que já trará bastante trabalho e aprendizado por agora. {\\}
 
-Sua anÃ¡lise veio da adoÃ§Ã£o de modelos para o movimento dos planetas. Como todos elas pareciam se mover de forma semelhante em torno de um mesmo corpo (o Sol) no cÃ©u, alguma (mesma) explicaÃ§Ã£o precisava ser dada para descrever este movimento. Isso tudo (e mais outros detalhes) trouxeram Ã  tona o formato particular da chamada \textbf{forÃ§a gravitacional}, descrita pela equaÃ§Ã£o (com K positivo):
+Sua análise veio da adoção de modelos para o movimento dos planetas. Como todos elas pareciam se mover de forma semelhante em torno de um mesmo corpo (o Sol) no céu, alguma (mesma) explicação precisava ser dada para descrever este movimento. Isso tudo (e mais outros detalhes) trouxeram à tona o formato particular da chamada \textbf{força gravitacional}, descrita pela equação (com K positivo):
 
 \begin{eqnarray}
     \mathbf{F} = -\frac{K}{r^2}\mathbf{\hat{r}}    \label{eq21}
 \end{eqnarray}
 
-Esta equaÃ§Ã£o chegou ao mundo de modo empÃ­rico, mas ela tem como base o formato de uma forÃ§a atrativa (dado que os planetas se moviam em torno de Ã³rbitas fechadas, deveria haver uma resultante centrÃ­peta - por isso o sinal negativo) e central (sendo o sistema heliocÃªntrico, o efeito deveria ter a mesma origem - o Sol). {\\}
+Esta equação chegou ao mundo de modo empírico, mas ela tem como base o formato de uma força atrativa (dado que os planetas se moviam em torno de órbitas fechadas, deveria haver uma resultante centrípeta - por isso o sinal negativo) e central (sendo o sistema heliocêntrico, o efeito deveria ter a mesma origem - o Sol). {\\}
 
-Sendo uma forÃ§a central, jÃ¡ sabemos que o movimento dos planetas Ã© plano, o momento angular Ã© conservado e a forÃ§a Ã© conservativa. Se transcrevermos estas quantidades por meio de equaÃ§Ãµes apropriadas, encontraremos todas as propriedades de um movimento orbital. {\\}
+Sendo uma força central, já sabemos que o movimento dos planetas é plano, o momento angular é conservado e a força é conservativa. Se transcrevermos estas quantidades por meio de equações apropriadas, encontraremos todas as propriedades de um movimento orbital. {\\}
 
-Esta explicaÃ§Ã£o pode ser estendida para qualquer movimento que tenha este mesmo formato para sua forÃ§a de interaÃ§Ã£o, como a interaÃ§Ã£o eletrostÃ¡tica.
+Esta explicação pode ser estendida para qualquer movimento que tenha este mesmo formato para sua força de interação, como a interação eletrostática.
 
 \section{Energia potencial gravitacional}
 
-Detalhemos, primeiramente, o nosso K. Sendo a forÃ§a essencialmente interativa, ela deveria depender de uma mesma propriedade dos corpos envolvidos. Newton propÃŽs que esta propriedade seria a chamada \textit{massa gravitacional} (levemente diferente da chamada \textit{massa inercial} utilizada em $\mathbf{F} = m\mathbf{a}$, mas que, na prÃ¡tica, Ã© bem prÃ³xima desta quantitativamente). Aqui chamaremos esse ente apenas de \textbf{massa}. {\\}
+Detalhemos, primeiramente, o nosso K. Sendo a força essencialmente interativa, ela deveria depender de uma mesma propriedade dos corpos envolvidos. Newton propôs que esta propriedade seria a chamada \textit{massa gravitacional} (levemente diferente da chamada \textit{massa inercial} utilizada em $\mathbf{F} = m\mathbf{a}$, mas que, na prática, é bem próxima desta quantitativamente). Aqui chamaremos esse ente apenas de \textbf{massa}. {\\}
 
-Faltaria ainda um fator de proporcionalidade. Ele Ã© chamado de \textbf{constante universal da GravitaÃ§Ã£o}, ou apenas \textbf{constante gravitacional}, denotada por $G$. Unindo estes detalhes, podemos adequar a equaÃ§Ã£o (\ref{eq21}) para nosso propÃ³sito:
+Faltaria ainda um fator de proporcionalidade. Ele é chamado de \textbf{constante universal da Gravitação}, ou apenas \textbf{constante gravitacional}, denotada por $G$. Unindo estes detalhes, podemos adequar a equação (\ref{eq21}) para nosso propósito:
 
 \begin{eqnarray}
     \mathbf{F} = -\frac{GMm}{r^2}\mathbf{\hat{r}}    \label{eq22}
 \end{eqnarray}
 
-Nesta equaÃ§Ã£o, $M$ denota a massa do corpo orbitado, $m$ denota a massa do corpo analisado, $r$ denota a distÃ¢ncia entre os corpos, $\mathbf{\hat{r}}$ corresponde ao vetor unitÃ¡rio que parte do corpo orbitado para o corpo analisado, e:
+Nesta equação, $M$ denota a massa do corpo orbitado, $m$ denota a massa do corpo analisado, $r$ denota a distância entre os corpos, $\mathbf{\hat{r}}$ corresponde ao vetor unitário que parte do corpo orbitado para o corpo analisado, e:
 
 \begin{eqnarray}
     G =  6,674287 \times 10^{-11}  m^3kg^{-1}s^{-2}   \label{eq23}
 \end{eqnarray}
 
-Como dito anteriormente, esta forÃ§a Ã© conservativa, entÃ£o existe uma energia potencial associada a ela. Tomando esta energia por U(r) (nÃ£o Ã© necessÃ¡ria a notaÃ§Ã£o vetorial, dado que so hÃ¡ dependÃªncia da posiÃ§Ã£o e a forÃ§a sÃ³ atua radialmente), encontramos sua notaÃ§Ã£o integrando a equaÃ§Ã£o (\ref{eq17}):
+Como dito anteriormente, esta força é conservativa, então existe uma energia potencial associada a ela. Tomando esta energia por U(r) (não é necessária a notação vetorial, dado que so há dependência da posição e a força só atua radialmente), encontramos sua notação integrando a equação (\ref{eq17}):
 
 \begin{eqnarray}
     U(r) - U(r_0) = -\int_{r_0}^{r}{\mathbf{F}.d\mathbf{r}}    \label{eq24}
 \end{eqnarray}
 
-Na equaÃ§Ã£o anterior, $r_0$ Ã© um valor de referÃªncia (posiÃ§Ã£o na qual o potencial seria nulo). Dado que \textbf{F} depende inversamente do quadrado da distÃ¢ncia \textit{r}, Ã© de se esperar que corpos infinitamente distantes nÃ£o interajam entre si, entÃ£o tomar $r_0 \Rightarrow \infty$ nos servirÃ¡ muito bem. Substituindo entÃ£o a expressÃ£o de \textbf{F} na expressÃ£o anterior, temos:
+Na equação anterior, $r_0$ é um valor de referência (posição na qual o potencial seria nulo). Dado que \textbf{F} depende inversamente do quadrado da distância \textit{r}, é de se esperar que corpos infinitamente distantes não interajam entre si, então tomar $r_0 \Rightarrow \infty$ nos servirá muito bem. Substituindo então a expressão de \textbf{F} na expressão anterior, temos:
 
 \begin{eqnarray}
     U(r) - U(\infty) = -\int_{\infty}^{r}{\left(\frac{GMm}{r^2}\mathbf{\hat{r}}\right).\left(dr.\mathbf{\hat{r}}\right)} =  -GMm\int_{\infty}^{r}{\frac{dr}{r^2}}    \label{eq25}
 \end{eqnarray}
 
-Terminando a integraÃ§Ã£o, tomando $U(\infty) = 0$, teremos que:
+Terminando a integração, tomando $U(\infty) = 0$, teremos que:
 
 \begin{eqnarray}
     U(r) = -GMm\left(-\left.\frac{1}{r}\right|_{\infty}^r \right) = GMm \left( \frac{1}{\infty} - \frac{1}{r} \right)    \label{eq26}
@@ -354,60 +379,60 @@ Concluindo:
     U(r) = -\frac{GMm}{r} \label{eq27}
 \end{eqnarray}
 
-Ã necessÃ¡rio verificar se $U(\infty) = 0$ de fato (isso foi uma consideraÃ§Ã£o inicial). No entanto, como a distÃ¢ncia \textit{r} estÃ¡ no denominador, Ã© fÃ¡cil perceber que esta relaÃ§Ã£o procede. Sendo assim, a equaÃ§Ã£o (\ref{eq27}) denota a \textbf{energia potencial gravitacional}.{\\}
+É necessário verificar se $U(\infty) = 0$ de fato (isso foi uma consideração inicial). No entanto, como a distância \textit{r} está no denominador, é fácil perceber que esta relação procede. Sendo assim, a equação (\ref{eq27}) denota a \textbf{energia potencial gravitacional}.{\\}
 
-Detalhada a energia potencial, podemos trabalhar em cima do momento angular e obter mais um termo de interesse. No entanto, estaremos entrando numa regiÃ£o no qual o movimento planetÃ¡rio serÃ¡ quase que unicamente abordado, entÃ£o algumas consideraÃ§Ãµes precisam ser feitas:
+Detalhada a energia potencial, podemos trabalhar em cima do momento angular e obter mais um termo de interesse. No entanto, estaremos entrando numa região no qual o movimento planetário será quase que unicamente abordado, então algumas considerações precisam ser feitas:
 
 \section{Potencial efetivo}
 
-A expressÃ£o tradicional da energia cinÃ©tica Ã©:
+A expressão tradicional da energia cinética é:
 
 \begin{eqnarray}
     K = \frac{m}{2}\mathbf{v.v} \label{eq28}
 \end{eqnarray}
 
-Como o movimento de um corpo sob a forÃ§a gravitacional Ã© plano, Ã© possivel descrevÃª-lo por meio de coordenadas polares (\textit{r, $\theta$}). Denotando a velocidade por meio deste novo eixo de coordenadas:
+Como o movimento de um corpo sob a força gravitacional é plano, é possivel descrevê-lo por meio de coordenadas polares (\textit{r, $\theta$}). Denotando a velocidade por meio deste novo eixo de coordenadas:
 
 \begin{eqnarray}
    \mathbf{v} = \left(\frac{dr}{dt}\right)\mathbf{\hat{r}} + \left(r\frac{d\theta}{dt}\right)\mathbf{\hat{\theta}} \label{eq29}
 \end{eqnarray}
 
-Como $\mathbf{\hat{r}}$ e $\mathbf{\hat{\theta}}$ sÃ£o ortogonais, podemos reescrever a expressÃ£o da equaÃ§Ã£o (\ref{eq28}):
+Como $\mathbf{\hat{r}}$ e $\mathbf{\hat{\theta}}$ são ortogonais, podemos reescrever a expressão da equação (\ref{eq28}):
 
 \begin{eqnarray}
     K = \frac{m}{2}\left[\left(\frac{dr}{dt}\right)^2 + r^2\left(\frac{d\theta}{dt}\right)^2\right] = \frac{m\dot{r}^2}{2} + \frac{mr^2\hat{\theta}^2}{2} \label{eq30}
 \end{eqnarray}
 
-No entanto, como jÃ¡ foi mencionado anteriormente, a forÃ§a gravitacional nÃ£o causa torque, o que nos traz que o momento angular \textbf{L} Ã© constante. Se observarmos o movimento de um corpo orbitante, podemos aproximar seu Sol (ou corpo orbitado) para um corpo fixo (o erro, na prÃ¡tica, Ã© pequeno). Para esta aproximaÃ§Ã£o, podemos aproximar o mÃ³dulo do momento angular para:
+No entanto, como já foi mencionado anteriormente, a força gravitacional não causa torque, o que nos traz que o momento angular \textbf{L} é constante. Se observarmos o movimento de um corpo orbitante, podemos aproximar seu Sol (ou corpo orbitado) para um corpo fixo (o erro, na prática, é pequeno). Para esta aproximação, podemos aproximar o módulo do momento angular para:
 \begin{eqnarray}
     L = mr^2\dot{\theta} \label{eq31}
 \end{eqnarray}
 
-Utilizando a equaÃ§Ã£o (\ref{eq31}) na equaÃ§Ã£o (\ref{eq30}):
+Utilizando a equação (\ref{eq31}) na equação (\ref{eq30}):
 
 \begin{eqnarray}
     K = \frac{m\dot{r}^2}{2} + \frac{L^2}{2mr^2} \label{eq32}
 \end{eqnarray}
 
-Compilando entÃ£o a energia total \textit{E}:
+Compilando então a energia total \textit{E}:
 
 \begin{eqnarray}
     E = U + K = \frac{m\dot{r}^2}{2} + \mathbf{\frac{L^2}{2mr^2} - \frac{GMm}{r}} \label{eq33}
 \end{eqnarray}
 
-O termo destacado em negrito Ã© chamado de \textbf{potencial efetivo, $\mathbf{V_{eff}}$}, e corresponde Ã  parcela da energia que depende apenas da distÃ¢ncia \textbf{r} envolvida:
+O termo destacado em negrito é chamado de \textbf{potencial efetivo, $\mathbf{V_{eff}}$}, e corresponde à parcela da energia que depende apenas da distância \textbf{r} envolvida:
 
 \begin{eqnarray}
     V_{eff} = V_{eff}(r)  = \frac{L^2}{2mr^2} - \frac{GMm}{r} \label{eq34}
 \end{eqnarray}
 
-A anÃ¡lise grÃ¡fica desta funÃ§Ã£o Ã© muito interessante, pois ela traz uma forma muito interessante de se observar o movimento orbital. No entanto, este tema serÃ¡ retomado pouco tempo depois de ser apresentadas as definiÃ§Ãµes de Ã³rbita, para que as coisas fiquem um pouco mais claras.
+A análise gráfica desta função é muito interessante, pois ela traz uma forma muito interessante de se observar o movimento orbital. No entanto, este tema será retomado pouco tempo depois de ser apresentadas as definições de órbita, para que as coisas fiquem um pouco mais claras.
 
-\section{EquaÃ§Ã£o do movimento orbital}
+\section{Equação do movimento orbital}
 
-Esta equaÃ§Ã£o do movimento Ã© trazida diretamente da expressÃ£o da energia mostrada na eq. (\ref{eq33}). No entanto, sua prova Ã© razoavelmente longa, com varios termos e expressÃµes pouco amigÃ¡veis a serem remanejadas. Ela serÃ¡ entÃ£o mostrada em passos.
+Esta equação do movimento é trazida diretamente da expressão da energia mostrada na eq. (\ref{eq33}). No entanto, sua prova é razoavelmente longa, com varios termos e expressões pouco amigáveis a serem remanejadas. Ela será então mostrada em passos.
 
-\subsection{1Âº passo: isolar tempo de distÃ¢ncia}
+\subsection{1º passo: isolar tempo de distância}
 
 Isolando a velocidade radial $\dot{r}$ na eq. (\ref{eq33}):
 
@@ -419,23 +444,23 @@ Isolando a velocidade radial $\dot{r}$ na eq. (\ref{eq33}):
 	 \dot{r} = \sqrt{\frac{2}{m}\left(E - \frac{L^2}{2mr^2} + \frac{GMm}{r}\right)}
 \]
 
-No entanto, como hÃ¡ uma derivada temporal envolvida:
+No entanto, como há uma derivada temporal envolvida:
 
 \[
 	\frac{dr}{dt} = \sqrt{\frac{2}{m}\left(E - \frac{L^2}{2mr^2} + \frac{GMm}{r}\right)}
 \]
 
-Da expressÃ£o acima, Ã© possivel entÃ£o isolar as variÃ¡veis \textit{r} e \textit{t}:
+Da expressão acima, é possivel então isolar as variáveis \textit{r} e \textit{t}:
 
 \begin{eqnarray}
 	dt = \frac{dr}{\sqrt{\frac{2}{m}\left(E - \frac{L^2}{2mr^2} + \frac{GMm}{r}\right)}} \label{eq35}
 \end{eqnarray}
 
-\subsection{2Âº passo: mudanÃ§as de variÃ¡vel}
+\subsection{2º passo: mudanças de variável}
 
-O tempo Ã© uma variÃ¡vel muito interessante de se obter, pois Ã© possivel entÃ£o prever as varias posiÃ§Ãµes da partÃ­cula. No entanto, a anÃ¡lise temporal de uma Ã³rbita nÃ£o tem tanta informaÃ§Ã£o quanto a descriÃ§Ã£o do movimento no plano orbital, do ponto de vista geomÃ©trico. Este movimento tem muito mais condiÃ§Ãµes de contorno a serem avaliadas, e a anÃ¡lise temporal nÃ£o nos trarÃ¡ isso com tanta clareza. {\\}
+O tempo é uma variável muito interessante de se obter, pois é possivel então prever as varias posições da partícula. No entanto, a análise temporal de uma órbita não tem tanta informação quanto a descrição do movimento no plano orbital, do ponto de vista geométrico. Este movimento tem muito mais condições de contorno a serem avaliadas, e a análise temporal não nos trará isso com tanta clareza. {\\}
 
-Ao invÃ©s de tempo, utilizaremos o Ã¢ngulo $\theta$ definido da mesma forma que para o momento angular. Obteremos entÃ£o uma equaÃ§Ã£o de forma geral $r(\theta)$, em busca da avaliaÃ§Ã£o do movimento como uma cÃŽnica. Isso Ã© possÃ­vel a partir da definiÃ§Ã£o de momento angular, tomada na forma diferencial:
+Ao invés de tempo, utilizaremos o ângulo $\theta$ definido da mesma forma que para o momento angular. Obteremos então uma equação de forma geral $r(\theta)$, em busca da avaliação do movimento como uma cônica. Isso é possível a partir da definição de momento angular, tomada na forma diferencial:
 
 \[
 	\frac{d\theta}{dt} = \frac{L}{mr^2}
@@ -445,21 +470,21 @@ Ao invÃ©s de tempo, utilizaremos o Ã¢ngulo $\theta$ definido da mesma forma 
 	dt = \frac{mr^2}{L}d\theta \label{eq36}
 \end{eqnarray}
 
-Outra substituiÃ§Ã£o que serÃ¡ muito Ãºtil, dados os expoentes envolvendo \textit{r} na equaÃ§Ã£o (\ref{eq35}), serÃ¡:
+Outra substituição que será muito útil, dados os expoentes envolvendo \textit{r} na equação (\ref{eq35}), será:
 
 \begin{eqnarray}
 	u = \frac{1}{r} \label{eq37}
 \end{eqnarray}
 
-A forma diferencial conveniente desta equaÃ§Ã£o Ã©:
+A forma diferencial conveniente desta equação é:
 
 \begin{eqnarray}
 	du = -\frac{dr}{r^2} \label{eq38}
 \end{eqnarray}
 
-\subsection{3Âº passo: utilizando as novas variÃ¡veis}
+\subsection{3º passo: utilizando as novas variáveis}
 
-Utilizando a equaÃ§Ã£o (\ref{eq36}) na equaÃ§Ã£o (\ref{eq35}):
+Utilizando a equação (\ref{eq36}) na equação (\ref{eq35}):
 
 \[
 	\frac{mr^2}{L}d\theta = \frac{dr}{\sqrt{\frac{2}{m}\left(E - \frac{L^2}{2mr^2} + \frac{GMm}{r}\right)}}
@@ -475,7 +500,7 @@ Utilizando agora as eqs. (\ref{eq37}) e (\ref{eq38}), podemos chegar que:
 	d\theta = -\frac{Ldu}{\sqrt{2mE -  L^2u^2 + 2GMm^2u}} \label{eq40}
 \end{eqnarray}
 
-A expressÃ£o no denominador Ã  esquerda Ã© bem prÃ³xima de um quadrado perfeito. Para deixÃ¡-la num formato ideal:
+A expressão no denominador à esquerda é bem próxima de um quadrado perfeito. Para deixá-la num formato ideal:
 
 \[
 	L^2u^2 - 2GMm^2u = L^2u^2 - 2GMm^2u + \frac{G^2M^2m^4}{L^2} - \frac{G^2M^2m^4}{L^2}
@@ -491,33 +516,33 @@ Com a eq. (\ref{eq41}) na eq. (\ref{eq40}):
 	d\theta = -\frac{Ldu}{\sqrt{2mE + \frac{G^2M^2m^4}{L^2} - \left(Lu - \frac{GMm^2}{L}\right)^2}}
 \]
 
-\subsection{4Âº passo: Ãºltimas substituiÃ§Ãµes e encontro da cÃŽnica}
+\subsection{4º passo: últimas substituições e encontro da cônica}
 
-Esta expressÃ£o lembra um pouco a integral do arco cosseno:
+Esta expressão lembra um pouco a integral do arco cosseno:
 
 \begin{eqnarray}
 	dx = \frac{dy}{\sqrt{1-y^2}}\rightarrow x- x_0 = cos^{-1}(y) \label{eq42}
 \end{eqnarray}
 
-Para chegarmos nela, as variÃ¡veis envolvidas tÃªm de ser adimensionais. Dado o quadrado perfeito da eq.  (\ref{eq41}), uma variÃ¡vel conveniente seria:
+Para chegarmos nela, as variáveis envolvidas têm de ser adimensionais. Dado o quadrado perfeito da eq.  (\ref{eq41}), uma variável conveniente seria:
 
 \begin{eqnarray}
 	\alpha = Lu - \frac{GMm^2}{L}  \rightarrow d\alpha = Ldu \label{eq43}
 \end{eqnarray}
 
-No entanto, esta variÃ¡vel ainda nÃ£o Ã© adimensional. Para isso, Ã© necessÃ¡rio utilizar:
+No entanto, esta variável ainda não é adimensional. Para isso, é necessário utilizar:
 
 \begin{eqnarray}
 	\beta = \frac{L\alpha}{GMm^2} \rightarrow d\beta = \frac{Ld\alpha}{GMm^2} \label{eq44}
 \end{eqnarray}
 
-Utilizando a equaÃ§Ã£o (\ref{eq44}) e rearranjando os termos, podemos chegar que:
+Utilizando a equação (\ref{eq44}) e rearranjando os termos, podemos chegar que:
 
 \begin{eqnarray}
 	d\theta = -\frac{d\beta}{\sqrt{\left(1 + \frac{2EL^2}{G^2M^2m^3}\right) - \beta^2}} \label{eq45}
 \end{eqnarray}
 
-Utilizando agora uma Ãºltima variÃ¡vel:
+Utilizando agora uma última variável:
 
 \begin{eqnarray}
 	\epsilon = \sqrt{1 + \frac{2EL^2}{G^2M^2m^3}} \label{eq46}
@@ -547,51 +572,51 @@ Retomando os valores originais, um de cada vez, e rearranjando os termos:
 	\frac{\left(\frac{L^2}{GMm^2}\right)}{r} = 1 + \sqrt{1 + \frac{2EL^2}{G^2M^2m^3}}(cos(\theta - \theta_0))
 \]{\\}
 
-Como a origem do Ã¢ngulo $\theta$ Ã© variÃ¡vel:
+Como a origem do ângulo $\theta$ é variável:
 
 \begin{eqnarray}
 	\frac{\left(\frac{L^2}{GMm^2}\right)}{r} = 1 - \sqrt{1 + \frac{2EL^2}{G^2M^2m^3}}(cos(\theta - \theta_0)) \label{eq49}
 \end{eqnarray}{\\}
 
-Se vocÃªs se lembram bem da fÃ³rmula geral da cÃŽnica:
+Se vocês se lembram bem da fórmula geral da cônica:
 
 \[
 	\frac{l}{r} = 1-\epsilon cos(\theta - \theta_0)
 \] 
 
-Ã fÃ¡cil de perceber que as equaÃ§Ãµes sÃ£o iguais, isto Ã©, a equaÃ§Ã£o do movimento orbital Ã© uma \textbf{cÃŽnica}, com $\epsilon$ correspondendo Ã  excentricidade jÃ¡ apresentada na eq.(\ref{eq46}), e com o \textit{semi-latus rectum} correspondendo a:
+É fácil de perceber que as equações são iguais, isto é, a equação do movimento orbital é uma \textbf{cônica}, com $\epsilon$ correspondendo à excentricidade já apresentada na eq.(\ref{eq46}), e com o \textit{semi-latus rectum} correspondendo a:
 \begin{eqnarray}
 	l = \frac{L^2}{GMm^2} \label{eq50}
 \end{eqnarray}
 
-\section{1Âª Lei de Kepler}
+\section{1ª Lei de Kepler}
 
-Provar que a equaÃ§Ã£o do movimento corresponde Ã  uma cÃŽnica jÃ¡ seria o suficiente para enunciar a 1Âª lei de Kepler. No entanto, Ã© necessÃ¡rio avaliar um Ãºltimo parÃ¢metro: a energia do corpo orbitante, \textit{E}.{\\}
+Provar que a equação do movimento corresponde à uma cônica já seria o suficiente para enunciar a 1ª lei de Kepler. No entanto, é necessário avaliar um último parâmetro: a energia do corpo orbitante, \textit{E}.{\\}
 
-Consideremos o caso em que \textbf{E>0}, o que significa que a energia cinÃ©tica serÃ¡ sempre maior que zero em todos os instantes do movimento. Isso significa que o corpo nunca serÃ¡ suficientemente desacelerado pela forÃ§a gravitacional, e, se nada mais impedir seu movimento, ele continuarÃ¡ assim para sempre. Na expressÃ£o da excentricidade, E>0 traz $\epsilon>1$, o que corresponde a um \textbf{movimento hiperbÃ³lico}. {\\}
+Consideremos o caso em que \textbf{E>0}, o que significa que a energia cinética será sempre maior que zero em todos os instantes do movimento. Isso significa que o corpo nunca será suficientemente desacelerado pela força gravitacional, e, se nada mais impedir seu movimento, ele continuará assim para sempre. Na expressão da excentricidade, E>0 traz $\epsilon>1$, o que corresponde a um \textbf{movimento hiperbólico}. {\\}
 
-Consideremos o caso em que \textbf{E=0}, no qual a energia cinÃ©tica do corpo serÃ¡ zero quando a energia potencial tambÃ©m for zero, i.e., no infinito. Para este valor de energia, $\epsilon=1$, o que corresponde a um \textbf{movimento parabÃ³lico}. {\\}
+Consideremos o caso em que \textbf{E=0}, no qual a energia cinética do corpo será zero quando a energia potencial também for zero, i.e., no infinito. Para este valor de energia, $\epsilon=1$, o que corresponde a um \textbf{movimento parabólico}. {\\}
 
-Consideremos entÃ£o o caso em que \textbf{E<0}, no qual a energia cinÃ©tica do corpo nÃ£o Ã© suficiente para superar a forÃ§a gravitacional. Como todos os planetas jamais "escapam" de suas Ã³rbitas, eles entram nesta categoria. A expressÃ£o da excentricidade trarÃ¡ $\epsilon<1$, o que jÃ¡ definiria um \textbf{movimento elÃ­ptico}.{\\}
+Consideremos então o caso em que \textbf{E<0}, no qual a energia cinética do corpo não é suficiente para superar a força gravitacional. Como todos os planetas jamais "escapam" de suas órbitas, eles entram nesta categoria. A expressão da excentricidade trará $\epsilon<1$, o que já definiria um \textbf{movimento elíptico}.{\\}
 
-No entanto, a equaÃ§Ã£o (\ref{eq49}) nÃ£o nos traz um limite inferior para a energia, o que poderia trazer $\epsilon^2<0$. Mas serÃ¡ que isso Ã© possÃ­vel mesmo? Vamos supor que esta inequaÃ§Ã£o seja vÃ¡lida, i.e.:
+No entanto, a equação (\ref{eq49}) não nos traz um limite inferior para a energia, o que poderia trazer $\epsilon^2<0$. Mas será que isso é possível mesmo? Vamos supor que esta inequação seja válida, i.e.:
 
 \[
 	\frac{2EL^2}{G^2M^2m^3}<-1 \rightarrow E<-\frac{G^2M^2m^3}{2L^2}
 \]{\\}
 
-No entanto, se utilizarmos a expressÃ£o do \textit{semi-latus rectum} na eq. (\ref{eq50}), teremos:
+No entanto, se utilizarmos a expressão do \textit{semi-latus rectum} na eq. (\ref{eq50}), teremos:
 
 \begin{eqnarray}
 	E<-\frac{GMm}{2l}		\label{eq51}
 \end{eqnarray}
 
-No entanto, se a energia Ã© negativa, o corpo ainda nÃ£o foi capaz de vencer a forÃ§a gravitacional, o que pode significar somente duas coisas: ou o corpo orbitante colidirÃ¡ com o corpo orbitado (o que faria o \textit{semi-latus rectum} tender a zero), ou haverÃ¡ um movimento de Ã³rbita fechada. Se a Ã³rbita for fechada (como no caso dos planetas), entÃ£o assumir $\epsilon^2<0$ jÃ¡ seria um absurdo. {\\}
+No entanto, se a energia é negativa, o corpo ainda não foi capaz de vencer a força gravitacional, o que pode significar somente duas coisas: ou o corpo orbitante colidirá com o corpo orbitado (o que faria o \textit{semi-latus rectum} tender a zero), ou haverá um movimento de órbita fechada. Se a órbita for fechada (como no caso dos planetas), então assumir $\epsilon^2<0$ já seria um absurdo. {\\}
 
-Agora sim podemos enunciar a 1Âª leis de Kepler:{\\}{\\}
-\textbf{\Large{1Âª Lei de Kepler: os planetas se movimentam em Ã³rbitas elÃ­pticas, tendo o Sol como um de seus focos.}} {\\}
+Agora sim podemos enunciar a 1ª leis de Kepler:{\\}{\\}
+\textbf{\Large{1ª Lei de Kepler: os planetas se movimentam em órbitas elípticas, tendo o Sol como um de seus focos.}} {\\}
 
-Se o corpo adotar uma Ã³rbita elÃ­ptica, entÃ£o ela terÃ¡ um semi-eixo maior \textit{a}. Como, das propriedades do \textit{semi-latus rectum} para a elipse, $l = a(1-\epsilon^2)$:
+Se o corpo adotar uma órbita elíptica, então ela terá um semi-eixo maior \textit{a}. Como, das propriedades do \textit{semi-latus rectum} para a elipse, $l = a(1-\epsilon^2)$:
 
 \[
 	\frac{L^2}{GMm^2} = a\left[1-\left(1 + \frac{2EL^2}{G^2M^2m^3}\right)\right]
@@ -605,11 +630,11 @@ Se o corpo adotar uma Ã³rbita elÃ­ptica, entÃ£o ela terÃ¡ um semi-eixo m
 	E = -\frac{GMm}{2a}	\label{eq52}
 \end{eqnarray}
 
-Aqui tambÃ©m Ã© mostrada uma segunda forma de ver se a excentricidade poderia ou nÃ£o ter uma raiz complexa: se $\epsilon^2<0$, entÃ£o l>a, e a energia total trazida pela equaÃ§Ã£o (\ref{eq51}) traria uma energia maior do que a energia trazida pela equaÃ§Ã£o (\ref{eq52}), o que seria um absurdo para uma Ã³rbita fechada (a Ãºnica opÃ§Ã£o que mantÃ©m movimento).
+Aqui também é mostrada uma segunda forma de ver se a excentricidade poderia ou não ter uma raiz complexa: se $\epsilon^2<0$, então l>a, e a energia total trazida pela equação (\ref{eq51}) traria uma energia maior do que a energia trazida pela equação (\ref{eq52}), o que seria um absurdo para uma órbita fechada (a única opção que mantém movimento).
 
-\section{2Âª Lei de Kepler}
+\section{2ª Lei de Kepler}
 
-Para mostrar e provar a 2Âª Lei de Kepler, sobre a Ã¡rea varrida por um planeta em funÃ§Ã£o do tempo, Ã© necessÃ¡rio observar o movimento orbital tomado por uma elipse (fig. 6).
+Para mostrar e provar a 2ª Lei de Kepler, sobre a área varrida por um planeta em função do tempo, é necessário observar o movimento orbital tomado por uma elipse (fig. 6).
 
 \begin{figure}[!htb]
     \centering
@@ -618,13 +643,13 @@ Para mostrar e provar a 2Âª Lei de Kepler, sobre a Ã¡rea varrida por um plan
     \label{fig6}
 \end{figure}
 
-Procuramos a Ã¡rea $\Delta A$ varrida por um corpo em seu movimento orbital, apÃ³s uma passagem de tempo $\Delta t$ e uma variaÃ§Ã£o angular $\Delta \theta$. Da figura 6, podemos obter que:
+Procuramos a área $\Delta A$ varrida por um corpo em seu movimento orbital, após uma passagem de tempo $\Delta t$ e uma variação angular $\Delta \theta$. Da figura 6, podemos obter que:
 
 \begin{eqnarray}
 	\Delta A = \frac{r(r+\Delta r)}{2}sen(\Delta \theta) + borda\label{eq53}
 \end{eqnarray}
 
-Tal borda corresponde Ã  parte curva externa ao retÃ¢ngulo (que traz o primeiro termo Ã  direita da equaÃ§Ã£o anterior), e ela tende a zero quando a passagem de tempo tambÃ©m tende a zero. Acrescentando a variaÃ§Ã£o angular e removendo o termo correspondente Ã  borda (tambÃ©m bem pequeno em relaÃ§Ã£o ao triÃ¢ngulo):
+Tal borda corresponde à parte curva externa ao retângulo (que traz o primeiro termo à direita da equação anterior), e ela tende a zero quando a passagem de tempo também tende a zero. Acrescentando a variação angular e removendo o termo correspondente à borda (também bem pequeno em relação ao triângulo):
 
 \[
 	\Delta A = \frac{r(r+\Delta r)}{2}\left(\frac{sen(\Delta \theta)}{\Delta \theta}\right)\Delta \theta
@@ -636,13 +661,13 @@ Dividindo tudo isso pelo tempo transcorrido:
     \frac{\Delta A}{\Delta t} = \frac{r(r+\Delta r)}{2}\left(\frac{sen(\Delta \theta)}{\Delta \theta}\right)\frac{\Delta \theta}{\Delta t}
 \]
 
-Para descobrir a Ã¡rea transcorrida em funÃ§Ã£o do tempo, Ã© necessÃ¡rio avaliar o limite da expressÃ£o acima quando $\Delta t \rightarrow 0$, limite para o qual tambÃ©m ocorrem os limites $\Delta \theta \rightarrow 0$ e $\Delta r \rightarrow 0$:
+Para descobrir a área transcorrida em função do tempo, é necessário avaliar o limite da expressão acima quando $\Delta t \rightarrow 0$, limite para o qual também ocorrem os limites $\Delta \theta \rightarrow 0$ e $\Delta r \rightarrow 0$:
 
 \begin{eqnarray}
 	 \lim_{\Delta t \rightarrow 0}\left({\frac{\Delta A}{\Delta t}}\right) = \frac{r^2}{2}\left(\lim_{\Delta \theta \rightarrow 0}{\frac{sen(\Delta \theta)}{\Delta \theta}}\right)\left(\lim_{\Delta t \rightarrow 0}{\frac{\Delta \theta}{\Delta t}}\right) + \frac{r}{2}\left(\lim_{\Delta \theta \rightarrow 0}{\frac{sen(\Delta \theta)}{\Delta \theta}}\right)\left(\lim_{\Delta t \rightarrow 0}{\frac{\Delta \theta}{\Delta t}}\right)\left(\lim_{\Delta r \rightarrow 0}{\Delta r}\right) \label{eq54}
 \end{eqnarray}
 
-Ã fÃ¡cil de ver que o segundo termo da soma Ã  direita vai a zero, pois $\lim_{\Delta r \rightarrow 0}{\Delta r} = 0$. Os demais limites presentes trazem:
+É fácil de ver que o segundo termo da soma à direita vai a zero, pois $\lim_{\Delta r \rightarrow 0}{\Delta r} = 0$. Os demais limites presentes trazem:
 
 \[
 	\lim_{\Delta t \rightarrow 0}{\frac{sen(\Delta \theta)}{\Delta \theta}} = 1
@@ -658,36 +683,36 @@ Logo:
 	\lim_{\Delta t \rightarrow 0}\left({\frac{\Delta A}{\Delta t}}\right) = \frac{dA}{dt} = \frac{r^2\dot{\theta}}{2}
 \]
 
-Esta expressÃ£o ainda nÃ£o nos ajuda completamente. No entanto, se multiplicarmos e dividirmos pela massa \textit{m} do corpo, retomamos a expressÃ£o do momento angular no numerador Ã  esquerda. Como ele Ã© constante:
+Esta expressão ainda não nos ajuda completamente. No entanto, se multiplicarmos e dividirmos pela massa \textit{m} do corpo, retomamos a expressão do momento angular no numerador à esquerda. Como ele é constante:
 
 \begin{eqnarray}
 	\frac{dA}{dt} = \frac{mr^2\dot{\theta}}{2m} = \frac{L}{2m} = constante \label{eq55}
 \end{eqnarray}
 
-Enfim provamos a 2Âª Lei de Kepler, escrita inicialmente para planetas:{\\}{\\}
-\textbf{\Large{2Âª Lei de Kepler: a Ã¡rea varrida pelo vetor que liga um planeta ao Sol num dado intervalo de tempo Ã© constante.}} {\\}
+Enfim provamos a 2ª Lei de Kepler, escrita inicialmente para planetas:{\\}{\\}
+\textbf{\Large{2ª Lei de Kepler: a área varrida pelo vetor que liga um planeta ao Sol num dado intervalo de tempo é constante.}} {\\}
 
-\section{3Âª Lei de Kepler}
+\section{3ª Lei de Kepler}
 
-A Ãºltima das leis de Kepler Ã©, na verdade, uma consequÃªncia direta da lei anterior. O movimento dos planetas, dada a simetria de seu movimento, Ã© periÃ³dico. Se este perÃ­odo tiver valor \textit{T}, da 2Âª Lei:
+A última das leis de Kepler é, na verdade, uma consequência direta da lei anterior. O movimento dos planetas, dada a simetria de seu movimento, é periódico. Se este período tiver valor \textit{T}, da 2ª Lei:
 
 \begin{eqnarray}
-	\frac{dA}{dt} = \frac{L}{2m} = \frac{\text{Ãrea da elipse}}{\text{PerÃ­odo}} = \frac{\pi ab}{T} \label{eq56}
+	\frac{dA}{dt} = \frac{L}{2m} = \frac{\text{Área da elipse}}{\text{Período}} = \frac{\pi ab}{T} \label{eq56}
 \end{eqnarray}
 
-Esta lei tem como objetivo trazer uma relaÃ§Ã£o entre o perÃ­odo e o semi-eixo maior, logo nÃ£o deve restar nem \textit{b} nem \textit{L} nesta equaÃ§Ã£o. Para eliminarmos $b$, das fÃ³rmulas da elipse:
+Esta lei tem como objetivo trazer uma relação entre o período e o semi-eixo maior, logo não deve restar nem \textit{b} nem \textit{L} nesta equação. Para eliminarmos $b$, das fórmulas da elipse:
 
 \[
 	b = a\sqrt{1 - \epsilon^2}
 \]
 
-Com a fÃ³rmula da excentricidade da elipse, podemos escrever que:
+Com a fórmula da excentricidade da elipse, podemos escrever que:
 
 \[
 	1 - \epsilon^2 = 1 - \left(1 + \frac{2EL^2}{G^2M^2m^3}\right) = - \frac{2EL^2}{G^2M^2m^3}
 \]
 
-Mas, sendo a Ã³rbita elÃ­ptica:
+Mas, sendo a órbita elíptica:
 
 \[
 	E = -\frac{GMm}{2a}
@@ -711,47 +736,47 @@ Simplificando:
 	\frac{1}{2} = \frac{\pi}{T}\left(\sqrt{\frac{a^3}{GM}}\right)
 \]
 
-Elevando os dois lados ao quadrado, podemos chegar, entÃ£o, que:
+Elevando os dois lados ao quadrado, podemos chegar, então, que:
 
 \begin{eqnarray}
 	\frac{a^3}{T^2} = \frac{GM}{4\pi^2} \label{eq57}
 \end{eqnarray}
 
-E esta expressÃ£o prova a Ãºltima das leis de Kepler:{\\}{\\}
-\textbf{\Large{3Âª Lei de Kepler: a razao do cubo do semi-eixo maior com o quadrado do perÃ­odo orbital Ã© constante para todos os corpos que orbitam o Sol.}} {\\}
+E esta expressão prova a última das leis de Kepler:{\\}{\\}
+\textbf{\Large{3ª Lei de Kepler: a razao do cubo do semi-eixo maior com o quadrado do período orbital é constante para todos os corpos que orbitam o Sol.}} {\\}
 
-Como a 3Âª Lei desdobra da 2Âª Lei, temos que apenas duas das leis de Kepler sÃ£o teoricamente inÃ©ditas. No entanto, a 3Âª Lei oferece um meio de se encontrar relaÃ§Ãµes muito Ãºteis das Ã³rbitas dos demais planetas e do prÃ³prio Sol (dado que a massa do corpo orbitado Ã© a que aparece na equaÃ§Ã£o), sendo por meio dos dados numÃ©ricos do movimento orbital dos planetas que Kepler chegou Ã  esta relaÃ§Ã£o. Seja como for, todas as trÃªs leis puderam ser provadas a partir de conceitos primordiais e de relaÃ§Ãµes matemÃ¡ticas envolvendo elipses.
+Como a 3ª Lei desdobra da 2ª Lei, temos que apenas duas das leis de Kepler são teoricamente inéditas. No entanto, a 3ª Lei oferece um meio de se encontrar relações muito úteis das órbitas dos demais planetas e do próprio Sol (dado que a massa do corpo orbitado é a que aparece na equação), sendo por meio dos dados numéricos do movimento orbital dos planetas que Kepler chegou à esta relação. Seja como for, todas as três leis puderam ser provadas a partir de conceitos primordiais e de relações matemáticas envolvendo elipses.
 
-\section{AnÃ¡lise grÃ¡fica do potencial efetivo}
+\section{Análise gráfica do potencial efetivo}
 
-Este tÃ³pico foi propositalmente deixado para o final para que todo o embasamento teÃ³rico das Leis de Kepler e a equaÃ§Ã£o do movimento fossem deduzidos, para que o que fosse visualizado aqui nÃ£o trouxesse maiores surpresas (e dado tambÃ©m que a prova das trÃªs leis de Kepler fluem melhor quando provadas conjuntamente).{\\}
+Este tópico foi propositalmente deixado para o final para que todo o embasamento teórico das Leis de Kepler e a equação do movimento fossem deduzidos, para que o que fosse visualizado aqui não trouxesse maiores surpresas (e dado também que a prova das três leis de Kepler fluem melhor quando provadas conjuntamente).{\\}
 
-Retomemos a expressÃ£o original do potencial efetivo $V_{eff}$:
+Retomemos a expressão original do potencial efetivo $V_{eff}$:
 
 \[
 	V_{eff}(r) = \frac{L^2}{2mr^2} - \frac{GMm}{r} 
 \]
 
-Esta equaÃ§Ã£o possui o mesmo formato grÃ¡fico que $(1/r^2 - 1/r)$, mostrado na fig. 7, a seguir. Ã possivel observar uma regiÃ£o negativa na qual existe uma tendÃªncia a $+\infty$ para $r \rightarrow 0_+$, um mÃ­nimo global numa regiÃ£o negativa, um ponto de inflexÃ£o e uma tendÃªncia a zero quando $r \rightarrow \infty$.
+Esta equação possui o mesmo formato gráfico que $(1/r^2 - 1/r)$, mostrado na fig. 7, a seguir. É possivel observar uma região negativa na qual existe uma tendência a $+\infty$ para $r \rightarrow 0_+$, um mínimo global numa região negativa, um ponto de inflexão e uma tendência a zero quando $r \rightarrow \infty$.
 
 \begin{figure}[!htb]
     \centering
      \includegraphics[scale=1]{elipse7.png}
-    {\emph{\caption{GrÃ¡fico de $(1/r^2 - 1/r)$, trazido como exemplo de funÃ§Ã£o de mesmo formato que $V_{eff}$.}}}
+    {\emph{\caption{Gráfico de $(1/r^2 - 1/r)$, trazido como exemplo de função de mesmo formato que $V_{eff}$.}}}
     \label{fig7}
 \end{figure}
 
-Se um corpo em Ã³rbita fechada estÃ¡ em uma posiÃ§Ã£o $r$ extrema (se for um mÃ¡ximo, \textbf{apoastro}; se for um mÃ­nimo, \textbf{periastro}), entÃ£o qualquer derivada de $r$ serÃ¡ nula, inclusive a temporal. Se retomarmos a expressÃ£o da energia E:
+Se um corpo em órbita fechada está em uma posição $r$ extrema (se for um máximo, \textbf{apoastro}; se for um mínimo, \textbf{periastro}), então qualquer derivada de $r$ será nula, inclusive a temporal. Se retomarmos a expressão da energia E:
 
 \[
 	E = \frac{m\dot{r}^2}{2} + V_{eff}(r)
 \]
 
-Se estivermos numa posiÃ§Ã£o extrema, entÃ£o a energia total Ã© dada somente por $V_{eff}$. Ou seja, se quisermos avaliar as posiÃ§Ãµes extremas de uma determinada Ã³rbita, basta entÃ£o traÃ§ar uma reta horizontal que cruze com o valor da energia total $E$ de uma Ã³rbita para descobrir os valores extremos do movimento. {\\}
+Se estivermos numa posição extrema, então a energia total é dada somente por $V_{eff}$. Ou seja, se quisermos avaliar as posições extremas de uma determinada órbita, basta então traçar uma reta horizontal que cruze com o valor da energia total $E$ de uma órbita para descobrir os valores extremos do movimento. {\\}
 
-Por exemplo, se $E$ for negativo, a Ã³rbita esperada serÃ¡ elÃ­ptica, e haverÃ¡ dois pontos de cruzamento da curva de $V_{eff}$ com a reta $y=E$. Se $E$ for nulo, a Ã³rbita esperada serÃ¡ parabolica, e haverÃ¡ um ponto de cruzamento visÃ­vel entre a curva e a reta (o segundo ponto ocorrerÃ¡ para $r \rightarrow \infty$. Se $E$ for positivo, entÃ£o sÃ³ haverÃ¡ um ponto de cruzamento entre a curva e a reta (este Ãºnico ponto corresponde Ã  distÃ¢ncia mÃ­nima que o corpo atinge durante todo o movimento antes de escapar da forÃ§a gravitacional). {\\}
+Por exemplo, se $E$ for negativo, a órbita esperada será elíptica, e haverá dois pontos de cruzamento da curva de $V_{eff}$ com a reta $y=E$. Se $E$ for nulo, a órbita esperada será parabolica, e haverá um ponto de cruzamento visível entre a curva e a reta (o segundo ponto ocorrerá para $r \rightarrow \infty$. Se $E$ for positivo, então só haverá um ponto de cruzamento entre a curva e a reta (este único ponto corresponde à distância mínima que o corpo atinge durante todo o movimento antes de escapar da força gravitacional). {\\}
 
-Ã possÃ­vel verificar o comportamento grÃ¡fico de $V_{eff}$ ilustrado pelo grÃ¡fico anterior. Primeiramente, para $r \rightarrow 0_+$, o crescimento de $|V_{eff}|$ Ã© muito grande, pois $1/r$ cresce muito rapidamente. No entanto, $1/r^2$ cresce ainda mais rÃ¡pido, e portanto Ã© o termo predominante. Logo, espera-se que $V_{eff}$ tenda a $+\infty$ para $r \rightarrow 0_+$.{\\}
+É possível verificar o comportamento gráfico de $V_{eff}$ ilustrado pelo gráfico anterior. Primeiramente, para $r \rightarrow 0_+$, o crescimento de $|V_{eff}|$ é muito grande, pois $1/r$ cresce muito rapidamente. No entanto, $1/r^2$ cresce ainda mais rápido, e portanto é o termo predominante. Logo, espera-se que $V_{eff}$ tenda a $+\infty$ para $r \rightarrow 0_+$.{\\}
 
 No entanto, $V_{eff}$ possui um zero, o que faz com que passe para o lado negativo para valores de $r$ maiores que:
 
@@ -759,24 +784,24 @@ No entanto, $V_{eff}$ possui um zero, o que faz com que passe para o lado negati
 	\frac{L^2}{2mr^2} - \frac{GMm}{r} = 0 \rightarrow r_0 = \frac{L^2}{2GMm^2}	\label{eq58}
 \end{eqnarray} 
 
-A partir de $r > r_0$, o termo que comeÃ§a a majorar Ã© o negativo, entÃ£o a energia total Ã© negativa. No entanto, como estes valores tendem a zero para $r \rightarrow \infty$, entÃ£o a prÃ³pria funÃ§Ã£o deve chegar prÃ³xima deste limite para $r$ crescente. Isso traz um ponto de mÃ­nimo global para a funÃ§Ã£o. Se derivarmos a expressÃ£o de $V_{eff}$ a procura de uma derivada nula:
+A partir de $r > r_0$, o termo que começa a majorar é o negativo, então a energia total é negativa. No entanto, como estes valores tendem a zero para $r \rightarrow \infty$, então a própria função deve chegar próxima deste limite para $r$ crescente. Isso traz um ponto de mínimo global para a função. Se derivarmos a expressão de $V_{eff}$ a procura de uma derivada nula:
 
 \begin{eqnarray}
 	\frac{dV_{eff}}{dr} = \frac{GMm}{r^2} -\frac{L^2}{mr^3} = 0 \rightarrow r_1 = \frac{L^2}{GMm^2} = 2r_0	\label{eq59}
 \end{eqnarray} 
 
-Ã possÃ­vel verificar ainda um ponto de inflexÃ£o, encontrÃ¡vel a partir de:
+É possível verificar ainda um ponto de inflexão, encontrável a partir de:
 
 \begin{eqnarray}
 	\frac{d^2V_{eff}}{dr^2} = \frac{3L^2}{mr^4} - \frac{2GMm}{r^3}  = 0 \rightarrow r_2 = \frac{3L^2}{2GMm^2} = 3r_0	\label{eq60}
 \end{eqnarray}
 
-Para verificar quanto vale $r_0$, basta compararmos a expressÃ£o com aquela do \textit{semi-latus rectum} para Ã³rbitas, e verificar que:
+Para verificar quanto vale $r_0$, basta compararmos a expressão com aquela do \textit{semi-latus rectum} para órbitas, e verificar que:
 
 \begin{eqnarray}
 	l = 2r_0	\label{eq61}
 \end{eqnarray}
 
-Se a energia $E$ de um corpo Ã© menor que a energia mÃ­nima do grÃ¡fico de $V_{eff}(r)$, isso nos traz que a energia cinÃ©tica do corpo Ã© negativa, o que Ã© um absurdo. Se $E$ for exatamente o valor mÃ­nimo do grÃ¡fico, entÃ£o apoastro e periastro terÃ£o a mesma distÃ¢ncia, o que corresponde a uma circunferÃªncia (a qual possui um \textit{semi-latus rectum} igual ao raio de sua Ã³rbita). E assim seguem as deduÃ§Ãµes do grÃ¡fico de $V_{eff}$.
+Se a energia $E$ de um corpo é menor que a energia mínima do gráfico de $V_{eff}(r)$, isso nos traz que a energia cinética do corpo é negativa, o que é um absurdo. Se $E$ for exatamente o valor mínimo do gráfico, então apoastro e periastro terão a mesma distância, o que corresponde a uma circunferência (a qual possui um \textit{semi-latus rectum} igual ao raio de sua órbita). E assim seguem as deduções do gráfico de $V_{eff}$.
 
 \end{document}
