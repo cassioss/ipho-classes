@@ -180,20 +180,20 @@ Isolando \textit{r}:
 Dividindo tudo por \textit{a}:
 
 \[
-	\frac{a^2 - c^2}{a}= r\left(1- \left(\frac{c}{a}\right)cos\theta\right) \label{eq18}
+	\frac{a^2 - c^2}{a}= r\left(1- \left(\frac{c}{a}\right)cos\theta\right)
 \]{\\}
 
 Com o auxílio das equações (\ref{eq7}) e (\ref{eq8}), podemos chegar à seguinte equação:
 
-\begin{eqnarray}
+\begin{equation}
 	\bf{\frac{l}{r}=(1-\epsilon cos\theta)} \label{eq10}
-\end{eqnarray}
+\end{equation}
 
 A equação anterior é denominada \textbf{equação da elipse em coordenadas polares}. Há também um formato muito útil para o caso de elipses rotacionadas, pois ele não depende do alinhamento do eixo principal com outros eixos de referência:
 
-\begin{eqnarray}
+\begin{equation}
 	\frac{l}{r}=(1-\epsilon cos(\theta - \theta_0)) \label{eq11}
-\end{eqnarray}
+\end{equation}
 
 As equações (\ref{eq10}) e (\ref{eq11}) podem ser utilizadas para representar qualquer cônica, definidos o \textit{semi-latus rectum} e a excentricidade. Estas mesmas equações são as bases da análise elíptica das equações de órbita na Gravitação.
 
@@ -201,9 +201,9 @@ As equações (\ref{eq10}) e (\ref{eq11}) podem ser utilizadas para representar 
 
 Entrando agora no âmbito da Gravitação propriamente dita, começaremos analisando as chamadas forças centrais. A definição formal de força central é a de que sua dependência é unicamente radial, i.e.:
 
-\begin{eqnarray}
+\begin{equation}
 	\mathbf{F} =\mathbf{F}(\mathbf{r}) = F_r \mathbf{\hat{r}} \label{eq12}
-\end{eqnarray}
+\end{equation}
 
 Vendo a fórmula anterior de outra forma, ela nos traz que as componentes tangenciais (no caso de coordenadas esféricas, as componentes nas direções $\theta$ e $\phi$) são nulas em todo o espaço. E isso nos é muito útil, pois isso traz ótimas propriedades.
 
@@ -213,9 +213,9 @@ Um detalhe muito bom da força central: o rotacional de \textbf{F} é \textbf{nu
 
 Para provar isso, basta utilizar a definição de rotacional para coordenadas esféricas:
 
-\begin{eqnarray}
+\begin{equation}
 	\nabla \times \textbf{F} (r,\theta,\phi) = \frac{1}{r^2sen\theta} \begin{vmatrix} & \hat{r} &rsen\phi\hat{\theta} &  r\hat{\phi} & \\ \\ & \frac{\partial}{\partial r} & \frac{\partial}{\partial \theta} & \frac{\partial}{\partial \phi} & \\ \\ & F_r & rsen\phi F_{\theta} & rF_{\phi} & \end{vmatrix} \label{eq13}	
-\end{eqnarray}
+\end{equation}
 
 Desenvolvendo o determinante, com $F_{\theta}$ = $F_{\phi}$ = 0:
 
@@ -249,9 +249,9 @@ A integral de uma força central ao longo de um percurso fechado \textit{qualque
 
 Se a força \textbf{F} é de fato conservativa, então a variação da energia potencial ao longo de um percurso fechado \textit{qualquer} tem de ser nulo (ou então a energia estaria sendo perdida em alguma outra forma). Se unirmos este conceito e as eqs. (\ref{eq16}) e (\ref{eq17}), chega-se que:
 
-\begin{eqnarray}
+\begin{equation}
 	\oint_{\partial S} dU = 0, \label{eq18}
-\end{eqnarray}
+\end{equation}
 {\\}com $\partial S$ \textit{qualquer}. A expressão acima nos traz que \textbf{F} é conservativa.
 
 \subsection{O momento angular é conservado}
@@ -446,15 +446,15 @@ Ao invés de tempo, utilizaremos o ângulo $\theta$ definido da mesma forma que 
 
 Outra substituição que será muito útil, dados os expoentes envolvendo \textit{r} na equação (\ref{eq35}), será:
 
-\begin{eqnarray}
-	u = \frac{1}{r} \label{eq37}
-\end{eqnarray}
+\begin{equation}
+	u = \frac{1}{r} \label{eq40}
+\end{equation}
 
 A forma diferencial conveniente desta equação é:
 
-\begin{eqnarray}
-	du = -\frac{dr}{r^2} \label{eq38}
-\end{eqnarray}
+\begin{equation}
+	du = -\frac{dr}{r^2} \label{eq41}
+\end{equation}
 
 \subsection{3º passo: utilizando as novas variáveis}
 
@@ -464,15 +464,15 @@ Utilizando a equação (\ref{eq36}) na equação (\ref{eq35}):
 	\frac{mr^2}{L}d\theta = \frac{dr}{\sqrt{\frac{2}{m}\left(E - \frac{L^2}{2mr^2} + \frac{GMm}{r}\right)}}
 \]
 
-\begin{eqnarray}
-	d\theta = \frac{\frac{L}{m}\frac{dr}{r^2}}{\sqrt{\frac{2}{m}\left(E - \frac{L^2}{2mr^2} + \frac{GMm}{r}\right)}} \label{eq39}
-\end{eqnarray}
+\begin{equation}
+	d\theta = \frac{\frac{L}{m}\frac{dr}{r^2}}{\sqrt{\frac{2}{m}\left(E - \frac{L^2}{2mr^2} + \frac{GMm}{r}\right)}} \label{eq42}
+\end{equation}
 
 Utilizando agora as eqs. (\ref{eq37}) e (\ref{eq38}), podemos chegar que:  
 
-\begin{eqnarray}
-	d\theta = -\frac{Ldu}{\sqrt{2mE -  L^2u^2 + 2GMm^2u}} \label{eq40}
-\end{eqnarray}
+\begin{equation}
+	d\theta = -\frac{Ldu}{\sqrt{2mE -  L^2u^2 + 2GMm^2u}} \label{eq43}
+\end{equation}
 
 A expressão no denominador à esquerda é bem próxima de um quadrado perfeito. Para deixá-la num formato ideal:
 
@@ -480,9 +480,9 @@ A expressão no denominador à esquerda é bem próxima de um quadrado perfeito.
 	L^2u^2 - 2GMm^2u = L^2u^2 - 2GMm^2u + \frac{G^2M^2m^4}{L^2} - \frac{G^2M^2m^4}{L^2}
 \]
 
-\begin{eqnarray}
-	L^2u^2 - 2GMm^2u = \left(Lu - \frac{GMm^2}{L}\right)^2 - \frac{G^2M^2m^4}{L^2} \label{eq41}
-\end{eqnarray}
+\begin{equation}
+	L^2u^2 - 2GMm^2u = \left(Lu - \frac{GMm^2}{L}\right)^2 - \frac{G^2M^2m^4}{L^2} \label{eq44}
+\end{equation}
 
 Com a eq. (\ref{eq41}) na eq. (\ref{eq40}):
 
@@ -494,45 +494,45 @@ Com a eq. (\ref{eq41}) na eq. (\ref{eq40}):
 
 Esta expressão lembra um pouco a integral do arco cosseno:
 
-\begin{eqnarray}
-	dx = \frac{dy}{\sqrt{1-y^2}}\rightarrow x- x_0 = cos^{-1}(y) \label{eq42}
-\end{eqnarray}
+\begin{equation}
+	dx = \frac{dy}{\sqrt{1-y^2}}\rightarrow x- x_0 = cos^{-1}(y) \label{eq45}
+\end{equation}
 
 Para chegarmos nela, as variáveis envolvidas têm de ser adimensionais. Dado o quadrado perfeito da eq.  (\ref{eq41}), uma variável conveniente seria:
 
-\begin{eqnarray}
-	\alpha = Lu - \frac{GMm^2}{L}  \rightarrow d\alpha = Ldu \label{eq43}
-\end{eqnarray}
+\begin{equation}
+	\alpha = Lu - \frac{GMm^2}{L}  \rightarrow d\alpha = Ldu \label{eq46}
+\end{equation}
 
 No entanto, esta variável ainda não é adimensional. Para isso, é necessário utilizar:
 
-\begin{eqnarray}
-	\beta = \frac{L\alpha}{GMm^2} \rightarrow d\beta = \frac{Ld\alpha}{GMm^2} \label{eq44}
-\end{eqnarray}
+\begin{equation}
+	\beta = \frac{L\alpha}{GMm^2} \rightarrow d\beta = \frac{Ld\alpha}{GMm^2} \label{eq47}
+\end{equation}
 
 Utilizando a equação (\ref{eq44}) e rearranjando os termos, podemos chegar que:
 
-\begin{eqnarray}
-	d\theta = -\frac{d\beta}{\sqrt{\left(1 + \frac{2EL^2}{G^2M^2m^3}\right) - \beta^2}} \label{eq45}
-\end{eqnarray}
+\begin{equation}
+	d\theta = -\frac{d\beta}{\sqrt{\left(1 + \frac{2EL^2}{G^2M^2m^3}\right) - \beta^2}} \label{eq48}
+\end{equation}
 
 Utilizando agora uma última variável:
 
-\begin{eqnarray}
-	\epsilon = \sqrt{1 + \frac{2EL^2}{G^2M^2m^3}} \label{eq46}
-\end{eqnarray}
+\begin{equation}
+	\epsilon = \sqrt{1 + \frac{2EL^2}{G^2M^2m^3}} \label{eq49}
+\end{equation}
 
 Chegamos, finalmente que:
 
-\begin{eqnarray}
-	d\theta = -\frac{d\beta}{\sqrt{\epsilon^2 - \beta^2}} \label{eq47}
-\end{eqnarray} {\\}
+\begin{equation}
+	d\theta = -\frac{d\beta}{\sqrt{\epsilon^2 - \beta^2}} \label{eq50}
+\end{equation} {\\}
 
 Se integrarmos, conforme mostrado na eq. (\ref{eq42}), chegaremos que:
 
-\begin{eqnarray}
-	\theta - \theta_0 = cos^{-1}\left(\frac{\beta}{\epsilon}\right) \rightarrow \frac{\beta}{\epsilon} = cos(\theta - \theta_0) \label{eq48}
-\end{eqnarray}
+\begin{equation}
+	\theta - \theta_0 = cos^{-1}\left(\frac{\beta}{\epsilon}\right) \rightarrow \frac{\beta}{\epsilon} = cos(\theta - \theta_0) \label{eq51}
+\end{equation}
 
 Retomando os valores originais, um de cada vez, e rearranjando os termos:
 
@@ -548,9 +548,9 @@ Retomando os valores originais, um de cada vez, e rearranjando os termos:
 
 Como a origem do ângulo $\theta$ é variável:
 
-\begin{eqnarray}
-	\frac{\left(\frac{L^2}{GMm^2}\right)}{r} = 1 - \sqrt{1 + \frac{2EL^2}{G^2M^2m^3}}(cos(\theta - \theta_0)) \label{eq49}
-\end{eqnarray}{\\}
+\begin{equation}
+	\frac{\left(\frac{L^2}{GMm^2}\right)}{r} = 1 - \sqrt{1 + \frac{2EL^2}{G^2M^2m^3}}(cos(\theta - \theta_0)) \label{eq52}
+\end{equation}{\\}
 
 Se vocês se lembram bem da fórmula geral da cônica:
 
@@ -559,9 +559,9 @@ Se vocês se lembram bem da fórmula geral da cônica:
 \] 
 
 É fácil de perceber que as equações são iguais, isto é, a equação do movimento orbital é uma \textbf{cônica}, com $\epsilon$ correspondendo à excentricidade já apresentada na eq.(\ref{eq46}), e com o \textit{semi-latus rectum} correspondendo a:
-\begin{eqnarray}
-	l = \frac{L^2}{GMm^2} \label{eq50}
-\end{eqnarray}
+\begin{equation}
+	l = \frac{L^2}{GMm^2} \label{eq53}
+\end{equation}
 
 \section{1ª Lei de Kepler}
 
@@ -581,9 +581,9 @@ No entanto, a equação (\ref{eq49}) não nos traz um limite inferior para a ene
 
 No entanto, se utilizarmos a expressão do \textit{semi-latus rectum} na eq. (\ref{eq50}), teremos:
 
-\begin{eqnarray}
-	E<-\frac{GMm}{2l}		\label{eq51}
-\end{eqnarray}
+\begin{equation}
+	E<-\frac{GMm}{2l}		\label{eq54}
+\end{equation}
 
 No entanto, se a energia é negativa, o corpo ainda não foi capaz de vencer a força gravitacional, o que pode significar somente duas coisas: ou o corpo orbitante colidirá com o corpo orbitado (o que faria o \textit{semi-latus rectum} tender a zero), ou haverá um movimento de órbita fechada. Se a órbita for fechada (como no caso dos planetas), então assumir $\epsilon^2<0$ já seria um absurdo. {\\}
 
@@ -600,9 +600,9 @@ Se o corpo adotar uma órbita elíptica, então ela terá um semi-eixo maior \te
 	\frac{L^2}{GMm^2} = a\left(-\frac{2EL^2}{G^2M^2m^3}\right)
 \]
 
-\begin{eqnarray}
-	E = -\frac{GMm}{2a}	\label{eq52}
-\end{eqnarray}
+\begin{equation}
+	E = -\frac{GMm}{2a}	\label{eq55}
+\end{equation}
 
 Aqui também é mostrada uma segunda forma de ver se a excentricidade poderia ou não ter uma raiz complexa: se $\epsilon^2<0$, então $l>a$, e a energia total trazida pela equação (\ref{eq51}) traria uma energia maior do que a energia trazida pela equação (\ref{eq52}), o que seria um absurdo para uma órbita fechada (a única opção que mantém movimento).
 
@@ -619,9 +619,9 @@ Para mostrar e provar a 2ª Lei de Kepler, sobre a área varrida por um planeta 
 
 Procuramos a área $\Delta A$ varrida por um corpo em seu movimento orbital, após uma passagem de tempo $\Delta t$ e uma variação angular $\Delta \theta$. Da figura 6, podemos obter que:
 
-\begin{eqnarray}
-	\Delta A = \frac{r(r+\Delta r)}{2}sen(\Delta \theta) + borda\label{eq53}
-\end{eqnarray}
+\begin{equation}
+	\Delta A = \frac{r(r+\Delta r)}{2}sen(\Delta \theta) + borda\label{eq56}
+\end{equation}
 
 Tal borda corresponde à parte curva externa ao triângulo (que traz o primeiro termo à direita da equação anterior), e ela tende a zero quando a passagem de tempo também tende a zero. Acrescentando a variação angular e removendo o termo correspondente à borda (também bem pequeno em relação ao triângulo):
 
@@ -637,9 +637,9 @@ Dividindo tudo isso pelo tempo transcorrido:
 
 Para descobrir a área transcorrida em função do tempo, é necessário avaliar o limite da expressão acima quando $\Delta t \rightarrow 0$, limite para o qual também ocorrem os limites $\Delta \theta \rightarrow 0$ e $\Delta r \rightarrow 0$:
 
-\begin{eqnarray}
-	 \lim_{\Delta t \rightarrow 0}\left({\frac{\Delta A}{\Delta t}}\right) = \frac{r^2}{2}\left(\lim_{\Delta \theta \rightarrow 0}{\frac{sen(\Delta \theta)}{\Delta \theta}}\right)\left(\lim_{\Delta t \rightarrow 0}{\frac{\Delta \theta}{\Delta t}}\right) + \frac{r}{2}\left(\lim_{\Delta \theta \rightarrow 0}{\frac{sen(\Delta \theta)}{\Delta \theta}}\right)\left(\lim_{\Delta t \rightarrow 0}{\frac{\Delta \theta}{\Delta t}}\right)\left(\lim_{\Delta r \rightarrow 0}{\Delta r}\right) \label{eq54}
-\end{eqnarray}
+\begin{equation}
+	 \lim_{\Delta t \rightarrow 0}\left({\frac{\Delta A}{\Delta t}}\right) = \frac{r^2}{2}\left(\lim_{\Delta \theta \rightarrow 0}{\frac{sen(\Delta \theta)}{\Delta \theta}}\right)\left(\lim_{\Delta t \rightarrow 0}{\frac{\Delta \theta}{\Delta t}}\right) + \frac{r}{2}\left(\lim_{\Delta \theta \rightarrow 0}{\frac{sen(\Delta \theta)}{\Delta \theta}}\right)\left(\lim_{\Delta t \rightarrow 0}{\frac{\Delta \theta}{\Delta t}}\right)\left(\lim_{\Delta r \rightarrow 0}{\Delta r}\right) \label{eq57}
+\end{equation}
 
 É fácil de ver que o segundo termo da soma à direita vai a zero, pois $\lim_{\Delta r \rightarrow 0}{\Delta r} = 0$. Os demais limites presentes trazem:
 
@@ -659,9 +659,9 @@ Logo:
 
 Esta expressão ainda não nos ajuda completamente. No entanto, se multiplicarmos e dividirmos pela massa \textit{m} do corpo, retomamos a expressão do momento angular no numerador à esquerda. Como ele é constante:
 
-\begin{eqnarray}
-	\frac{dA}{dt} = \frac{mr^2\dot{\theta}}{2m} = \frac{L}{2m} = constante \label{eq55}
-\end{eqnarray}
+\begin{equation}
+	\frac{dA}{dt} = \frac{mr^2\dot{\theta}}{2m} = \frac{L}{2m} = constante \label{eq58}
+\end{equation}
 
 Enfim provamos a 2ª Lei de Kepler, escrita inicialmente para planetas:{\\}{\\}
 \textbf{\Large{2ª Lei de Kepler: a área varrida pelo vetor que liga um planeta ao Sol num dado intervalo de tempo é constante.}} {\\}
@@ -670,9 +670,9 @@ Enfim provamos a 2ª Lei de Kepler, escrita inicialmente para planetas:{\\}{\\}
 
 A última das leis de Kepler é, na verdade, uma consequência direta da lei anterior. O movimento dos planetas, dada a simetria de seu movimento, é periódico. Se este período tiver valor \textit{T}, da 2ª Lei:
 
-\begin{eqnarray}
-	\frac{dA}{dt} = \frac{L}{2m} = \frac{\text{Área da elipse}}{\text{Período}} = \frac{\pi ab}{T} \label{eq56}
-\end{eqnarray}
+\begin{equation}
+	\frac{dA}{dt} = \frac{L}{2m} = \frac{\text{Área da elipse}}{\text{Período}} = \frac{\pi ab}{T} \label{eq59}
+\end{equation}
 
 Esta lei tem como objetivo trazer uma relação entre o período e o semi-eixo maior, logo não deve restar nem \textit{b} nem \textit{L} nesta equação. Para eliminarmos $b$, das fórmulas da elipse:
 
@@ -712,9 +712,9 @@ Simplificando:
 
 Elevando os dois lados ao quadrado, podemos chegar, então, que:
 
-\begin{eqnarray}
-	\frac{a^3}{T^2} = \frac{GM}{4\pi^2} \label{eq57}
-\end{eqnarray}
+\begin{equation}
+	\frac{a^3}{T^2} = \frac{GM}{4\pi^2} \label{eq60}
+\end{equation}
 
 E esta expressão prova a última das leis de Kepler:{\\}{\\}
 \textbf{\Large{3ª Lei de Kepler: a razao do cubo do semi-eixo maior com o quadrado do período orbital é constante para todos os corpos que orbitam o Sol.}} {\\}
@@ -754,27 +754,27 @@ Por exemplo, se $E$ for negativo, a órbita esperada será elíptica, e haverá 
 
 No entanto, $V_{eff}$ possui um zero, o que faz com que passe para o lado negativo para valores de $r$ maiores que:
 
-\begin{eqnarray}
-	\frac{L^2}{2mr^2} - \frac{GMm}{r} = 0 \rightarrow r_0 = \frac{L^2}{2GMm^2}	\label{eq58}
-\end{eqnarray} 
+\begin{equation}
+	\frac{L^2}{2mr^2} - \frac{GMm}{r} = 0 \rightarrow r_0 = \frac{L^2}{2GMm^2}	\label{eq61}
+\end{equation} 
 
 A partir de $r > r_0$, o termo que começa a majorar é o negativo, então a energia total é negativa. No entanto, como estes valores tendem a zero para $r \rightarrow \infty$, então a própria função deve chegar próxima deste limite para $r$ crescente. Isso traz um ponto de mínimo global para a função. Se derivarmos a expressão de $V_{eff}$ a procura de uma derivada nula:
 
-\begin{eqnarray}
-	\frac{dV_{eff}}{dr} = \frac{GMm}{r^2} -\frac{L^2}{mr^3} = 0 \rightarrow r_1 = \frac{L^2}{GMm^2} = 2r_0	\label{eq59}
-\end{eqnarray} 
+\begin{equation}
+	\frac{dV_{eff}}{dr} = \frac{GMm}{r^2} -\frac{L^2}{mr^3} = 0 \rightarrow r_1 = \frac{L^2}{GMm^2} = 2r_0	\label{eq62}
+\end{equation} 
 
 É possível verificar ainda um ponto de inflexão, encontrável a partir de:
 
-\begin{eqnarray}
-	\frac{d^2V_{eff}}{dr^2} = \frac{3L^2}{mr^4} - \frac{2GMm}{r^3}  = 0 \rightarrow r_2 = \frac{3L^2}{2GMm^2} = 3r_0	\label{eq60}
-\end{eqnarray}
+\begin{equation}
+	\frac{d^2V_{eff}}{dr^2} = \frac{3L^2}{mr^4} - \frac{2GMm}{r^3}  = 0 \rightarrow r_2 = \frac{3L^2}{2GMm^2} = 3r_0	\label{eq63}
+\end{equation}
 
 Para verificar quanto vale $r_0$, basta compararmos a expressão com aquela do \textit{semi-latus rectum} para órbitas, e verificar que:
 
-\begin{eqnarray}
-	l = 2r_0	\label{eq61}
-\end{eqnarray}
+\begin{equation}
+	l = 2r_0	\label{eq64}
+\end{equation}
 
 Se a energia $E$ de um corpo é menor que a energia mínima do gráfico de $V_{eff}(r)$, isso nos traz que a energia cinética do corpo é negativa, o que é um absurdo. Se $E$ for exatamente o valor mínimo do gráfico, então apoastro e periastro terão a mesma distância, o que corresponde a uma circunferência (a qual possui um \textit{semi-latus rectum} igual ao raio de sua órbita). E assim seguem as deduções do gráfico de $V_{eff}$.
 
@@ -795,5 +795,51 @@ Estas são as provas de algumas propriedades com as quais é possível brincar q
 \subsection{Apoastro e periastro}
 
 Como dito anteriormente, apoastro é a posição mais distante de um corpo orbitante com relação ao corpo orbitado, enquanto periastro é a posição mais próxima entre estes dois corpos. Se estivermos falando do Sol como corpo orbitado, as denominações passam a ser \textbf{afélio} e \textbf{periélio}. Se a Terra for o corpo orbitado, são chamados \textbf{apogeu} e \textbf{perigeu}.
+
+
+Se lembrarmos da equação (\ref{eq36}):
+
+
+\[
+	E = \frac{m \dot{r}^2}{2} + \frac{L^2}{2mr^2} - \frac{GMm}{r}
+\]
+
+Já discutimos aqui que, em um ponto de distância máxima/mínima da órbita, a derivada da posição \textbf{r} vai a zero. Sendo assim, no ponto de distância máxima:
+
+\[
+	E = \frac{L^2}{2mr^2} - \frac{GMm}{r}
+\]
+
+No entanto, esta é uma equação do segundo grau. Se multiplicarmos os dois lados por $r^2 / E$ e reordenando os termos: 
+
+\begin{equation}
+	r^2 + \left(\frac{GMm}{E}\right)r - \frac{L^2}{2mE} = 0 	\label{eq65}
+\end{equation}
+
+Tomando $E \neq 0$, temos como soluções para esta equação:
+
+\[
+	r = - \frac{GMm}{2E} \pm \sqrt{\frac{G^2 M^2 m^2}{4E^2} + \frac{L^2}{2mE}}
+\]
+
+Ou ainda:
+
+\[
+	r = - \frac{GMm}{2E} \left(1 \pm \sqrt{1 + \frac{2EL^2}{G^2 M^2 m^3}} \right)
+\]
+
+O que se encontra dentro da raiz lembra muito a equação da excentricidade de uma cônica, presente na eq.(\ref{eq52}):
+
+\begin{equation}
+	r = - \frac{GMm}{2E}(1 \pm \epsilon)	\label{eq66}
+\end{equation}
+
+Se a órbita for elíptica, utilizando a eq.(\ref{eq55}):
+
+\begin{equation}
+	r = a(1 \pm \epsilon) = a \pm c	\label{eq67}
+\end{equation}
+
+Esta equação faz sentido. Se considerarmos o eixo principal das primeiras figuras, fica fácil de ver que os pontos extremos com relação a um dos polos estarão nele.
 
 \end{document}
