@@ -12,20 +12,20 @@
 
 \section{Introdução}
 
-Muitos dos conceitos relacionados a órbitas e à Gravitação requerem um conhecimento básico sobre elipses. Serão mostradas aqui duas formas de se analisar uma elipse matematicamente: a primeira, em coordenadas require basic knowledge about ellipses. It will be shown here two ways to analyse an ellipse mathematically: first using its equation in Cartesian coordinates, and second using its equation in polar coordinates. After that, the main analyses involving Gravitation will be made, linking the concepts of ellipses to describe planetary orbits.
+Muitos dos conceitos relacionados a órbitas e à Gravitação requerem um conhecimento básico sobre elipses. Serão mostradas aqui duas formas de se analisar uma elipse matematicamente: a primeira, em coordenadas cartesianas, e a segunda, em coordenadas polares. Após isso, serão feitas as principais análises sobre Gravitação, ligando a elas os conceitos de elipses para descrever órbitas planetárias.
 
 \section{Definição}
 
-The ellipse , by definition , is the locus of points the sum of whose distances from two fixed points is constant. The trajectory described by this locus is closed, and resembles a circle. The degenerated ellipse (in which these two points coincide) is indeed the circumference. It is one of the most known and used conics.
+A elipse, por definição, é o lugar geométrico (LG) dos pontos cuja soma das distâncias a dois pontos fixos é constante. A trajetória descrita por este LG é fechada, numa forma aproximada a uma circunferência. A elipse degenerada (na qual estes dois pontos fixos coincidem) é de fato uma circunferência. É uma das cônicas mais conhecidas.
 
 \section{Nomenclaturas}
 
-A simple drawing of the ellipse to be analyzed is one in which, in Cartesian coordinates, the line determined by fixed points (named \textbf{major axis}) is aligned with the \textit{x}-  or \textit{y}-axis (Fig. 1).
+Um desenho simples da elipse que podemos analisar é aquele no qual, em coordenadas cartesianas, a linha determinada pelos pontos fixos (chamada de \textbf{eixo principal}) está alinhada com o eixo \textit{x} ou o eixo \textit{y} (fig. 1).
 
 \begin{figure}[!htb]
     \centering
      \includegraphics[scale=0.5]{elipse0.png}
-    {\emph{\caption{Ellipse drawing with the x-axis aligned with the major axis.}}}
+    {\emph{\caption{Desenho de elipse com o eixo x alinhado com o eixo principal.}}}
 	\label{fig1}
 \end{figure}
 
@@ -604,7 +604,7 @@ Se o corpo adotar uma órbita elíptica, então ela terá um semi-eixo maior \te
 	E = -\frac{GMm}{2a}	\label{eq52}
 \end{eqnarray}
 
-Aqui também é mostrada uma segunda forma de ver se a excentricidade poderia ou não ter uma raiz complexa: se $\epsilon^2<0$, então l>a, e a energia total trazida pela equação (\ref{eq51}) traria uma energia maior do que a energia trazida pela equação (\ref{eq52}), o que seria um absurdo para uma órbita fechada (a única opção que mantém movimento).
+Aqui também é mostrada uma segunda forma de ver se a excentricidade poderia ou não ter uma raiz complexa: se $\epsilon^2<0$, então $l>a$, e a energia total trazida pela equação (\ref{eq51}) traria uma energia maior do que a energia trazida pela equação (\ref{eq52}), o que seria um absurdo para uma órbita fechada (a única opção que mantém movimento).
 
 \section{2ª Lei de Kepler}
 
@@ -623,7 +623,7 @@ Procuramos a área $\Delta A$ varrida por um corpo em seu movimento orbital, ap�
 	\Delta A = \frac{r(r+\Delta r)}{2}sen(\Delta \theta) + borda\label{eq53}
 \end{eqnarray}
 
-Tal borda corresponde à parte curva externa ao retângulo (que traz o primeiro termo à direita da equação anterior), e ela tende a zero quando a passagem de tempo também tende a zero. Acrescentando a variação angular e removendo o termo correspondente à borda (também bem pequeno em relação ao triângulo):
+Tal borda corresponde à parte curva externa ao triângulo (que traz o primeiro termo à direita da equação anterior), e ela tende a zero quando a passagem de tempo também tende a zero. Acrescentando a variação angular e removendo o termo correspondente à borda (também bem pequeno em relação ao triângulo):
 
 \[
 	\Delta A = \frac{r(r+\Delta r)}{2}\left(\frac{sen(\Delta \theta)}{\Delta \theta}\right)\Delta \theta
@@ -777,5 +777,23 @@ Para verificar quanto vale $r_0$, basta compararmos a expressão com aquela do \
 \end{eqnarray}
 
 Se a energia $E$ de um corpo é menor que a energia mínima do gráfico de $V_{eff}(r)$, isso nos traz que a energia cinética do corpo é negativa, o que é um absurdo. Se $E$ for exatamente o valor mínimo do gráfico, então apoastro e periastro terão a mesma distância, o que corresponde a uma circunferência (a qual possui um \textit{semi-latus rectum} igual ao raio de sua órbita). E assim seguem as deduções do gráfico de $V_{eff}$.
+
+\section{Considerações para a Eletrostática}
+
+Muita coisa ainda pode ser descoberta utilizando apenas o formato geral da força de atração gravitacional. Não só isso, por ela possuir o mesmo formato da força eletrostática:
+
+\[
+	\bf{F} = \frac{K_0 q_1 q_2}{r^2}\hat{\bf{r}}
+\]
+
+Tudo que foi provado aqui pode ser utilizado no âmbito da Eletrostática, com duas cargas de sinais opostos sendo o análogo a duas massas se atraindo.
+
+\section{Provas diversas}
+
+Estas são as provas de algumas propriedades com as quais é possível brincar quando se fala de Gravitação.
+
+\subsection{Apoastro e periastro}
+
+Como dito anteriormente, apoastro é a posição mais distante de um corpo orbitante com relação ao corpo orbitado, enquanto periastro é a posição mais próxima entre estes dois corpos. Se estivermos falando do Sol como corpo orbitado, as denominações passam a ser \textbf{afélio} e \textbf{periélio}. Se a Terra for o corpo orbitado, são chamados \textbf{apogeu} e \textbf{perigeu}.
 
 \end{document}
