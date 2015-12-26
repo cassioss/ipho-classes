@@ -1007,9 +1007,9 @@ Para o caso do periastro, basta trocar o sinal da excentricidade nas duas equaç
 
 \newpage
 
-\section{Órbitas parabólicas e hiperbólicas ($\epsilon \geq 1$)}
+\section{Órbitas hiperbólicas ($\epsilon > 1$)}
 
-Estes casos não podem ser ditos como sendo órbitas \textit{per se}, pois elas não são fechadas. Propriedades advindas do fato de a força ser radial continuam valendo:
+Órbitas hiperbólicas não são fechadas. No entanto, propriedades advindas do fato de a força ser radial continuam valendo:
 
 \begin{itemize}
 	\item A energia total $E$ se conserva (força conservativa);
@@ -1017,5 +1017,74 @@ Estes casos não podem ser ditos como sendo órbitas \textit{per se}, pois elas 
 	\item O momento está contido num único plano.
 \end{itemize}
 
+Conceitos como período e as leis de Kepler deixam de ser válido. Mas qual é o tipo mais comum de problema com órbitas hiperbólicas? Ele está, no caso, ilustrado na figura abaixo.
+
+\begin{figure}[!htb]
+    \centering
+     \includegraphics[scale=0.5]{elipse8.png}
+    {\emph{\caption{Problema mais comum envolvendo órbita hiperbólica.}}}
+	\label{fig9}
+\end{figure}
+
+Um pequeno satélite de massa $m$ chega próximo a um planeta de massa $M >> m$ e raio $R$ após ter transitado uma longa distância determinada por uma reta assíntota distante de $b$ com relação ao centro de massa do corpo de massa $M$. O corpo chega a uma distância mínima $a$ do planeta sem que haja colisão, e por conta da atração gravitacional, o satélite acaba desviando de sua trajetória original por um ângulo $\theta$.{\\}
+
+\bt{\begin{enumerate}
+	\item Encontre a velocidade escalar do satélite quando ele estiver mais próximo do planeta.
+	\item Determine $a$ em função dos valores fornecidos e da constante gravitacional $G$.
+	\item Determine $v_0$ de tal forma que o satélite não colida com o planeta.
+	\item Encontre o ângulo de desvio $\theta$ em função das variáveis fornecidas.
+\end{enumerate}}
+
+Se pretende resolver os itens acima, não olhe a próxima página (spoilers). Estes são exercícios altamente recomendados.{\\}
+
+...
+
+...
+
+...
+
+...{\\}
+
+Resolvidos? Se sim, deu para ver que os primeiros três itens são relativamente simples comparados com o último. Vamos tirá-los logo do caminho.{\\}
+
+Para o primeiro e segundo itens, basta conservarmos o momento angular (com relação ao centro de massa do planeta) e a energia total do satélite:
+
+\begin{equation}
+	bv_0 = av 	\label{eq84}
+\end{equation}
+
+\begin{equation}
+	\frac{mv_0^2}{2} = \frac{mv^2}{2} - \frac{GMm}{a}	\label{eq85}
+\end{equation}
+
+O trabalho aqui é meramente braçal. Se isolarmos $a$ e $v$, e lembrando que $v > v_0$ por conta da conservação do momento angular, com o auxílio de uma nova variável:
+
+\begin{equation}
+	\beta = \frac{GM}{bv_0^2}	\label{eq86}
+\end{equation}
+
+Teremos:
+
+\begin{equation}
+	v = v_0 \left(\beta + \sqrt{1 + \beta^2} \right)	\label{eq87}
+\end{equation}
+
+\begin{equation}
+	a = \frac{b}{\beta + \sqrt{1 + \beta^2}}			\label{eq88}
+\end{equation}
+
+Para o terceiro item, basta utilizar a \refeq{eq88} com $a \geq R$:
+
+\begin{equation}
+	\frac{b}{\beta + \sqrt{1 + \beta^2}} \geq R			\label{eq89}
+\end{equation}
+
+Utilizando o valor nominal de $\beta$, podemos obter:
+
+\begin{equation}
+	v_0 \geq \froot{2GMR}{b^2 - R^2}					\label{eq90}
+\end{equation}
+
+Resta agora o último item.
 
 \end{document}
