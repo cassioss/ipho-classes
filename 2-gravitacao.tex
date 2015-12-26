@@ -842,9 +842,9 @@ Dado que a força gravitacional é apenas de atração, chegamos à conhecida Le
 
 \section{Provas diversas}
 
-Estas são as provas de algumas propriedades com as quais é possível brincar quando se fala de Gravitação.
+Estas são as provas de algumas propriedades com as quais é possível brincar quando se fala de Gravitação. Qualquer uma delas pode cair em uma prova, dados os usos peculiares e as análises necessárias.
 
-\subsection{Apoastro e periastro}
+\section{Apoastro e periastro}
 
 Como dito anteriormente, apoastro é a posição mais distante de um corpo orbitante com relação ao corpo orbitado, enquanto periastro é a posição mais próxima entre estes dois corpos. Se estivermos falando do Sol como corpo orbitado, as denominações passam a ser \textbf{afélio} e \textbf{periélio}. Se a Terra for o corpo orbitado, são chamados \textbf{apogeu} e \textbf{perigeu}.{\\}
 
@@ -936,17 +936,86 @@ Utilizando-o na expressão da velocidade:
 Para o apoastro (ou afélio, ou apogeu):
 
 \begin{equation}
-	r = a (1 + \epsilon), \quad
-	v = \sqrt{\frac{GM}{a}} \sqrt{\frac{1-\epsilon}{1+\epsilon}}	
+	r_{apoastro} = a (1 + \epsilon), \quad
+	v_{apoastro} = \sqrt{\frac{GM}{a}} \sqrt{\frac{1-\epsilon}{1+\epsilon}}	
 	\label{eq71}
 \end{equation}
 
-E para o peristro (ou periélio, ou perigeu):
+E para o periastro (ou periélio, ou perigeu):
 
 \begin{equation}
-	r = a (1 - \epsilon), \quad
-	v = \sqrt{\frac{GM}{a}} \sqrt{\frac{1+\epsilon}{1-\epsilon}}	
+	r_{periastro} = a (1 - \epsilon), \quad
+	v_{periastro} = \sqrt{\frac{GM}{a}} \sqrt{\frac{1+\epsilon}{1-\epsilon}}	
 	\label{eq72}
 \end{equation}
+
+É possível também encontrar uma expressão para o momento angular:
+
+\begin{equation}
+	L = m\sqrt{GMa}\sqrt{1 - \epsilon^2}		\label{eq73}
+\end{equation}
+
+\newpage
+
+\section{Órbitas circulares ($\epsilon = 0$) e velocidade de escape}
+
+Órbitas circulares (ou circunféricas) são as mais comuns de serem analisadas, pois possuem as contas mais simples de serem feitas. Dado que a excentricidade é nula, a distância do corpo orbitante ao corpo orbitado é sempre a mesma. Não só isso, sendo a velocidade sempre tangente à trajetória, a velocidade escalar não se altera.{\\}
+
+É bom lembrar que a circunferência é um tipo de elipse, e respeitará fórmulas muito parecidas. Se tomarmos o raio da órbita como sendo $a$, se retornarmos às fórmulas, obteremos:
+
+\begin{gather}
+	l = a									\label{eq74}		\\
+	U_{orb} = \frac{GMm}{a}					\label{eq75}		\\
+	E_{orb} = -\frac{GMm}{2a}				\label{eq76}		\\
+	U_{orb} = -\frac{GMm}{a}				\label{eq77}		\\
+	v_{orb} = \sqrt{\frac{GM}{a}}			\label{eq78}		\\
+	L_{orb} = m\sqrt{GMa}					\label{eq79}
+\end{gather}
+
+Outras propriedades podem ser obtidas, mas a mais interessante delas é, certamente, a \bt{velocidade de escape}. Ela é a velocidade necessária para que, em um determinado ponto da trajetória, o corpo seja capaz de escapar do efeito gravitacional. De forma simplificada, é a velocidade que, se não estiver direcionada para dentro do campo gravitacional (ocasionando colisão), traz $E \geq 0$. Considerando que a velocidade não seja relativística, para a órbita circular:
+
+\begin{equation}
+	E = -\frac{GMm}{a} + \frac{mv_{escape}^2}{2} \geq 0		\label{eq80}
+\end{equation}
+
+Isolando $v_{escape}$ e considerando o caso mínimo:
+
+\begin{equation}
+	v_{escape} = \froot{2Gm}{a} = \sqrt{2} \times v_{orb}		
+	\label{eq81}
+\end{equation}
+
+$\sqrt{2}$ é uma relação conhecida entre a velocidade de órbita e a velocidade de escape em quaisquer órbitas circulares criadas sob efeito de uma força radial com formato semelhante ao da força gravitacional (como a força eletrostática).{\\}
+
+Analisar a velocidade de escape para uma elipse pediria conhecimento da velocidade radial e da posição, o que costuma ser difícil de analisar, e se a análise for feita para a Terra (com excentricidade da ordem de 0.0167), a órbita é normalmente dita circular. {\\}
+
+No entanto, quando queremos escapar de uma órbita, queremos utilizar a menor velocidade possível para isso, uma vez que mais velocidade seria igual a um gasto maior com combustível, que costuma ser um recurso limitado em viagens espaciais. Se utilizarmos o apoastro (ponto mais afastado), a atração gravitacional será mais fraca, e a velocidade de escape será menor.{\\}
+
+Para encontrá-la, podemos utilizar a \refeq{eq80} trocando $a$ pelo raio da órbita:
+
+\begin{equation}
+	v_{escape} = \froot{2Gm}{a(1+\epsilon)}						\label{eq82}
+\end{equation}
+
+Comparando-a com a velocidade orbital no apoastro, presente na \refeq{eq71}:
+
+\begin{equation}
+	v_{escape} = \froot{2}{1-\epsilon} \times v_{apoastro}		\label{eq83}
+\end{equation}
+
+Para o caso do periastro, basta trocar o sinal da excentricidade nas duas equações acima.
+
+\newpage
+
+\section{Órbitas parabólicas e hiperbólicas ($\epsilon \geq 1$)}
+
+Estes casos não podem ser ditos como sendo órbitas \textit{per se}, pois elas não são fechadas. Propriedades advindas do fato de a força ser radial continuam valendo:
+
+\begin{itemize}
+	\item A energia total $E$ se conserva (força conservativa);
+	\item O momento angular se conserva;
+	\item O momento está contido num único plano.
+\end{itemize}
+
 
 \end{document}
