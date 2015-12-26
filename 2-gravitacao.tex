@@ -150,7 +150,7 @@ Da equação (\ref{eq3}):
 
 \section{Excentricidade}
 
-Algo também muito conhecido da Gravitação é a chamada \textbf{excentricidade}, muito comum no que se refere a órbitas. Pela definição, toda cônica pode ser definida como o lugar geométrico dos pontos cujas distâncias a um ponto e a uma reta possuem a mesma razão. No caso da elipse, há duas retas (uma para cada foco) externas e paralelas ao eixo secundário que possuem tal propriedade. Porém, tal definição não nos é útil. $\\$
+Algo também muito conhecido da Gravitação é a chamada \bt{excentricidade}, muito comum no que se refere a órbitas. Pela definição, toda cônica pode ser definida como o lugar geométrico dos pontos cujas distâncias a um ponto e a uma reta possuem a mesma razão. No caso da elipse, há duas retas (uma para cada foco) externas e paralelas ao eixo secundário que possuem tal propriedade. Porém, tal definição não nos é útil. $\\$
 
 Ao invés disso, utilizaremos uma outra definição: a excentricidade $\epsilon$ pode ser dada pela razão entre a excentricidade linear (definida como a distância entre o centro da cônica e qualquer um dos focos, neste caso \textit{c}) e o semi-eixo maior \textit{a}:
 
@@ -559,13 +559,15 @@ Retomando os valores originais, um de cada vez, e rearranjando os termos de form
 
 \[
 	\frac{\frac{L\alpha}{GMm^2}}{\sqrt{1 + \frac{2EL^2}{G^2M^2m^3}}} =  cos(\theta - \theta_0)
-\] {\\}
+\]
+
 \[
 	\frac{\frac{L}{GMm^2}\left(Lu-\frac{GMm^2}{L}\right)}{\sqrt{1 + \frac{2EL^2}{G^2M^2m^3}}} =  cos(\theta - \theta_0)
-\] {\\}
+\]
+
 \[
 	\frac{\left(\frac{L^2}{GMm^2}\right)}{r} = 1 + \sqrt{1 + \frac{2EL^2}{G^2M^2m^3}}(cos(\theta - \theta_0))
-\]{\\}
+\]
 
 Como a origem do ângulo $\theta$ é variável, podemos utilizar $\theta_0 = \theta_0 + \pi$ e obter:
 
@@ -610,7 +612,7 @@ No entanto, se utilizarmos a expressão do \textit{semi-latus rectum} na eq. (\r
 
 No entanto, se a energia é negativa, o corpo ainda não foi capaz de vencer a força gravitacional, o que pode significar somente duas coisas: ou o corpo orbitante colidirá com o corpo orbitado (o que faria o \textit{semi-latus rectum} tender a zero), ou haverá um movimento de órbita fechada. Se a órbita for fechada (como no caso dos planetas), então assumir $\epsilon^2<0$ já seria um absurdo. {\\}
 
-Agora sim podemos enunciar a 1ª lei de Kepler:{\\}{\\}{\\}{\\}
+Agora sim podemos enunciar a 1ª lei de Kepler:{\\}{\\}{\\}
 \textbf{\Large{1ª Lei de Kepler: os planetas se movimentam em órbitas elípticas, tendo o Sol como um de seus focos.}} {\\}
 
 Se o corpo adotar uma órbita elíptica, então ela terá um semi-eixo maior \textit{a}. Como, das propriedades do \textit{semi-latus rectum} para a elipse, $l = a(1-\epsilon^2)$:
@@ -687,7 +689,7 @@ Esta expressão ainda não nos ajuda completamente. No entanto, se multiplicarmo
 \end{equation}
 
 Enfim provamos a 2ª Lei de Kepler, escrita inicialmente para planetas:{\\}{\\}{\\}
-\textbf{\Large{2ª Lei de Kepler: a área varrida pelo vetor que liga um planeta ao Sol num dado intervalo de tempo é constante.}} {\\}
+\textbf{\Large{2ª Lei de Kepler: a área varrida pelo vetor que liga um planeta ao Sol num dado intervalo de tempo é constante.}}
 
 \section{3ª Lei de Kepler}
 
@@ -719,13 +721,13 @@ Logo:
 
 \[
 	1 - \epsilon^2 = -\frac{2L^2}{G^2M^2m^3}\left(-\frac{GMm}{2a}\right) = \frac{L^2}{GMm^2a} \rightarrow \sqrt{1-\epsilon^2} = \frac{L}{m}\sqrt{\frac{1}{GMa}}
-\]{\\}
+\]
 
 Com isso:
 
 \[
 	\frac{L}{2m} = \frac{\pi a^2}{T}\left(\frac{L}{m}\sqrt{\frac{1}{GMa}}\right)
-\]{\\}
+\]
 
 Simplificando:
 
@@ -888,6 +890,63 @@ Se a órbita for elíptica, utilizando a eq. (\ref{eq56}):
 	r = a(1 \pm \epsilon) = a \pm c	\label{eq68}
 \end{equation}
 
-Esta equação faz sentido. Se considerarmos o eixo principal das primeiras figuras, fica fácil de ver que os pontos extremos com relação a um dos polos estarão neste eixo.
+Esta equação faz sentido. Se considerarmos o eixo principal das primeiras figuras, fica fácil de ver que os pontos extremos com relação a um dos polos estarão neste eixo.{\\}
+
+E para encontrar a velocidade nestes pontos (ainda considerando ser uma elipse)? Se estão nos pontos mais extremos da órbita, como $\dot{r} = 0$, a velocidade será tangencial à órbita. Sendo assim, se o momento angular da órbita é $L$, se a velocidade escalar do corpo for $v$ e a distância, $r$:
+
+\begin{equation}
+	L = mvr			\label{eq69}
+\end{equation}
+
+Se vocês se lembrarem da \refequ{eq59}:
+
+\[
+	\frac{L}{2m} = \frac{\pi ab}{T}
+\]
+
+Utilizando a \refeq{eq59}:
+
+\[
+	\frac{mvr}{2m} = \frac{vr}{2} = \frac{\pi ab}{T}
+\]
+
+\[
+	v = \frac{2\pi ab}{Tr}
+\]
+
+Eliminando $b$ com o uso da excentricidade e utilizando a \refeq{eq68}:
+
+\[
+	v = \frac{2\pi a}{T} \frac{\sqrt{1 - \epsilon^2}}{1 \pm \epsilon}
+	  = \frac{2\pi a}{T} \sqrt{\frac{(1-\epsilon)(1+\epsilon)}{(1 \pm \epsilon)(1 \pm \epsilon)}}
+\]
+
+Esta equação ainda não está muito gentil conosco, pois trabalha com período e semi-eixo maior, quando normalmente só é fornecido um deles (normalmente, o semi-eixo maior). Se isolarmos o período na 3ª Lei de Kepler, da \refeq{eq60}:
+
+\begin{equation}
+	T = 2\pi a \sqrt{\frac{a}{GM}}	\label{eq70}
+\end{equation}
+
+Utilizando-o na expressão da velocidade:
+
+\[
+	v = \sqrt{\frac{GM}{a}} \sqrt{\frac{(1-\epsilon)(1+\epsilon)}{(1 \pm \epsilon)(1 \pm \epsilon)}}
+\]
+
+Para o apoastro (ou afélio, ou apogeu):
+
+\begin{equation}
+	r = a (1 + \epsilon), \quad
+	v = \sqrt{\frac{GM}{a}} \sqrt{\frac{1-\epsilon}{1+\epsilon}}	
+	\label{eq71}
+\end{equation}
+
+E para o peristro (ou periélio, ou perigeu):
+
+\begin{equation}
+	r = a (1 - \epsilon), \quad
+	v = \sqrt{\frac{GM}{a}} \sqrt{\frac{1+\epsilon}{1-\epsilon}}	
+	\label{eq72}
+\end{equation}
 
 \end{document}
