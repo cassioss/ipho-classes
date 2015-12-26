@@ -1085,6 +1085,66 @@ Utilizando o valor nominal de $\beta$, podemos obter:
 	v_0 \geq \froot{2GMR}{b^2 - R^2}					\label{eq90}
 \end{equation}
 
-Resta agora o último item.
+Resta agora o último item. Para isso, precisaremos de algumas equações (\refer{eq11}, \refer{eq50}, \refer{eq54}):
+
+\[
+	\frac{l}{r} = 1 - \epsilon cos(\theta - \theta_0)
+\]
+\[
+	\epsilon = \sqrt{1 + \frac{2EL^2}{G^2 M^2 m^3}}
+\]
+\[
+	l = \frac{L}{GMm^2}
+\]
+
+No entanto, temos valores claros para o momento angular e para a energia do sistema:
+
+\[
+	L = mv_0b
+\]
+\[
+	E = \frac{mv_0^2}{2}
+\]
+
+Com isso, temos, para o \textit{semi-latus rectum} e para a excentricidade:
+
+\begin{equation}
+	l = \frac{bv_0}{GMm}	\label{eq91}
+\end{equation}
+
+\begin{equation}
+	\epsilon = \sqrt{1 + \left(\frac{bv_0^2}{GM}\right)^2} = \sqrt{1 + \frac{1}{\beta^2}}					\label{eq92}
+\end{equation}
+
+O que sabemos da nossa equação é que, próximo das assíntotas, $r \rightarrow \infty$, e com isso:
+
+\begin{equation}
+	1 - \epsilon cos(\theta - \theta_0) = 0 \rightarrow cos(\theta - \theta_0) = \frac{1}{\epsilon}			\label{eq93}
+\end{equation}
+
+O que sabemos é que os ângulos inicial e final são, respectivamente, $\pi$ e $-\pi + \theta$ (de acordo com a figura). Resta então escolher $\theta_0$ tal que:
+
+\[
+	cos(\pi - \theta_0) = \frac{1}{\epsilon}
+\]
+
+Se tomarmos:
+
+\begin{equation}
+	\frac{1}{\epsilon} = cos(\alpha), \quad \frac{\pi}{2} > \alpha > 0	\label{eq93}
+\end{equation}
+
+Utilizando agora:
+
+\[
+	\theta_0 = \pi - \alpha
+\]
+
+Isso resolve uma parte do problema. Resta então encontrar:
+
+\[
+	cos(-\pi + \theta - \pi + \alpha) = cos(-2\pi + \theta + \alpha) = cos(\theta + \alpha) = \frac{1}{\epsilon}
+\]
+
 
 \end{document}
